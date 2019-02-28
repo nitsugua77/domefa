@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>DMF</title>
+    <meta name="author" content="Les Pingouins du Désert">
+    <meta name="description" content="Dossier Médicale Facilité">
+    <meta name="keywords" content="Dosssier Médicale Facile Santé ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Stylesheet" href="home.css">
+
+</head>
+<body>
+<div id="components-accueil">
+    <div class="container1">
+        <a class="item" href="index.html"><img src="logo2.png" alt="Dossier Médicale Facilité"></a>
+        <h1 class="title">Le Dossier Médicale Facilité</h1>
+
+        <ul class="grouped">
+
+            <li>
+                <button-connect></button-connect>
+            </li>
+            <li><button-register></button-register></li>
+        </ul>
+
+    </div>
+
+
+    <div class="container2">
+        <image-container2></image-container2>
+        <overlay-container2></overlay-container2>
+    </div>
+
+    <div class="container3">
+        <h2> Qu'est ce que le DMF ?</h2>
+        <text-container3></text-container3>
+        <image-container3></image-container3>
+
+        <br>
+
+        <button-information></button-information>
+        <br>
+    </div>
+
+    <div>
+
+    </div>
+
+
+
+
+    <!--
+    <div class = "ui success message " id="test">
+
+      <input type="text" v-on:input="changeTitle">
+      <h1>{{title}}</h1>
+
+    </div>
+    -->
+</div>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
