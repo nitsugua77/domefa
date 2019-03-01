@@ -144,7 +144,7 @@ CREATE TABLE `utilisateur` (
   `Adresse` varchar(50) COLLATE utf8_bin NOT NULL,
   `AddresseMail` varchar(50) COLLATE utf8_bin NOT NULL,
   `Telephone` int(11) NOT NULL,
-  `TypeUtilisateur` varchar(50) COLLATE utf8_bin NOT NULL,
+  `TypeUtilisateur` tinyint(1) NOT NULL,
   `IdPatient` int(11) DEFAULT NULL,
   `IdMedecin` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
