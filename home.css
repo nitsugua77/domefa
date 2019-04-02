@@ -427,6 +427,18 @@ span.psw {
     font-family: "Century Gothic", serif;
 }
 
+#img_doctor
+{
+    height:150px;
+    width:150px;
+}
+
+#img_client
+{
+    height:150px;
+    width:150px;
+}
+
 .button_espace_pro
 {
     background-color: #ecb235;
