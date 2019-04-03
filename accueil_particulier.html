@@ -61,27 +61,94 @@
                             <div class="container">
                                 <form action="/ma-page-de-traitement" method="post">
                                     <div>
-                                        <label for="name">Nom :</label>
-                                        <input type="text" id="name" name="Nom">
-                                    </div>
+                                        <form action="accueil_particulier.html">
 
-                                    <div>
-                                        <label for="name">Prénom :</label>
-                                        <input type="text" id="name" name="Prenom">
-                                    </div>
+                                            <div class="form-group">
+                                                <label> Genre:
+                                                    <input type="radio" name="gender" value="male" checked> Male
+                                                    <input type="radio" name="gender" value="female"> Female
+                                                </label><br>
+                                            </div>
 
-                                    <div>
-                                        <label for="mail">e-mail :</label>
-                                        <input type="email" id="mail" name="AdresseMail">
-                                    </div>
+                                            <div class="form-group">
+                                                <label for="email">Email:</label><br>
+                                                <input type="email" class="form-control" id="email" placeholder="Enter email"
+                                                       name="email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pwd">Mot de Passe:</label>
+                                                <input type="password" class="form-control" id="pwd" placeholder="Mot de passe"
+                                                       name="pwd" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pwd">Mot de Passe:</label>
+                                                <input type="password" class="form-control" id="cpwd" placeholder="Mot de passe"
+                                                       name="Confirm_Password" required>
+                                            </div>
 
-                                    <div>
-                                        <label for="mb">Mobile : </label>
-                                        <input type="text" id="mb" placeholder="Enter Mobile" name="Mobile"
-                                               required>
-                                    </div>
+                                            <div class="form-group">
+                                                <label for="fn"> Prénoms : </label>
+                                                <input type="text" class="form-control" id="fn" placeholder="Prénoms"
+                                                       name="First_name" required>
+                                            </div>
 
-                                </form>
+                                            <div class="form-group">
+                                                <label for="ln">Nom : </label>
+                                                <input type="text" class="form-control" id="ln" placeholder="Nom de famille"
+                                                       name="Last_name" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="ct">Ville: </label>
+                                                <input type="text" class="form-control" id="ct" placeholder="Enter City" name="City"
+                                                       required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="ct">Adresse: </label>
+                                                <input type="text" class="form-control" id="ct" placeholder="Adresse" name="adresse"
+                                                       required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="mb">Téléphone : </label>
+                                                <input type="text" class="form-control" id="mb" placeholder="Enter Mobile" name="Mobile"
+                                                       required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="NumeroCarteVitale">Numero Securite sociale</label>
+                                                <input type="text" placeholder="Securite sociale" name="NumeroCarteVitale" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="spe">Carte Identité : </label>
+                                                <input type="file" id="signature" name="signature" accept="image/png, image/jpeg" multiple required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Date de Naissance:
+                                                    <input type="date" name="DateOfBirth">
+                                                </label><br>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label> Groupe Sanguin:
+                                                    <input type="radio" name="GroupeSanguin" value="A+" checked> A+
+                                                    <input type="radio" name="GroupeSanguin" value="A-"> A-
+                                                    <input type="radio" name="GroupeSanguin" value="B+" checked> B+
+                                                    <input type="radio" name="GroupeSanguin" value="B-"> B-
+                                                    <input type="radio" name="GroupeSanguin" value="AB" checked> AB
+                                                    <input type="radio" name="GroupeSanguin" value="O+" checked> O+
+                                                    <input type="radio" name="GroupeSanguin" value="O-"> O-
+                                                </label><br>
+                                            </div>
+
+
+                                            <!-- Trigger the modal with the submit button -->
+                                            <button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Register</button>
+
+                                        </form>
                             </div>
 
                             <div class="container" style="background-color:#f1f1f1">
