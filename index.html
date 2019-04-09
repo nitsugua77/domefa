@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>DMF</title>
@@ -10,19 +10,22 @@
     <link rel="Stylesheet" href="home.css">
 
 </head>
+
 <body>
 <div id="components-accueil">
     <div class="container1">
         <a class="item" id ="imagefond" href="index.html"><img src="logo2.png" alt="Dossier Médicale Facilité" ></a>
         <h1 class="title">Le Dossier Médicale Facilité</h1>
+        <div >
+            <ul>
 
-        <ul class="grouped">
-
-            <li>
-                <button-connect></button-connect>
-            </li>
-            <li><button-register></button-register></li>
-        </ul>
+                <li>
+                    <button-connect id="show-modal" @click="showModal = true"></button-connect>
+                    <modal v-if="showModal" @close="showModal = false">  </modal>
+                </li>
+                <li><button-register></button-register></li>
+            </ul>
+        </div>
 
     </div>
 
@@ -45,8 +48,7 @@
 
     <div class="container4">
         <h2> Pourquoi utiliser le DMF ?</h2>
-        <p>Avec une version numérique, personne ne pourrait oublier son carnet de santé.<br>
-            Il serait accessible n’importe quand et même en cas d’urgence ! </p>
+        <text-container4></text-container4>
     </div>
 
 

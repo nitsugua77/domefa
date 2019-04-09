@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>DMF</title>
     <meta name="author" content="Les Pingouins du Désert">
-    <meta name="description" content="Dossier Médicale Facilité">
-    <meta name="keywords" content="Dosssier Médicale Facile Santé ">
+    <meta name="description" content="Header Dossier Médicale Facilité">
+    <meta name="keywords" content="Header Dosssier Médicale Facile Santé ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="Stylesheet" href="home.css">
     <link rel="Stylesheet" href="header.css">
 
-
-
 </head>
-
 <body>
 <div>
     <div class="container1">
         <a class="item" href="accueil_pro.html"><img src="logo2.png" alt="Dossier Médicale Facilité"></a>
 
-        <a href="accueil_particulier.html"> <button class="button_espace_particulier">Vers Espace Particulier</button></a>
-        <h1 class="title">Le Dossier Médicale Facilité</h1>
+
+        <h1 class="title_header">Le Dossier Médicale Facilité</h1>
         <div>
             <ul class="grouped">
 
@@ -99,9 +95,9 @@
                                     </div>
 
                                     <div class="form-group">
-                                    <label for="ct">Ville: </label>
-                                    <input type="text" class="form-control" id="ct" placeholder="Enter City" name="City"
-                                           required>
+                                        <label for="ct">Ville: </label>
+                                        <input type="text" class="form-control" id="ct" placeholder="Enter City" name="City"
+                                               required>
                                     </div>
 
                                     <div class="form-group">
@@ -143,35 +139,7 @@
                 </li>
             </ul>
         </div>
-
-    </div>
-
-    <div class="container2">
-        <img src="2.jpg" alt="Dossier Médicale Facilité">
-        <div class="overlay"> DMF, votre Dossier Médicale Facilité !</div>
-    </div>
-
-    <div class="container3">
-        <h2> Qu'est ce que le DMF ?</h2>
-        <p> Le DMF est un carnet de santé accessible en ligne, permettant de regrouper toutes vos informations, facilitant leur visibilité par vos différents médecins. </p>
-        <img src="container3.png">
-
-        <br>
-
-        <button class="button_container3"><span> EN SAVOIR PLUS </span></button>
-        <br>
-    </div>
-
-    <div class="container4">
-        <h2> Pourquoi utiliser le DMF ?</h2>
-        <p>Avec une version numérique, personne ne pourrait oublier son carnet de santé.<br>\n' +
-            '            Il serait accessible n’importe quand et même en cas d’urgence ! </p>
-    </div>
-
-
-
-
-</div>
+</body>
 
 <script>
     // Get the modal
@@ -184,5 +152,8 @@
         }
     }
 </script>
-</body>
 </html>
+
+
+<?php
+?>
