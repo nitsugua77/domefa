@@ -1,0 +1,29 @@
+# Composer files
+la_phasmitude/composer.phar
+la_phasmitude/vendor/
+
+# Local configs
+la_phasmitude/config/autoload/*.local.php
+la_phasmitude/config/*.local.php
+
+# Binary gettext files
+*.mo
+
+# Data
+la_phasmitude/data/logs/
+la_phasmitude/data/cache/
+la_phasmitude/data/sessions/
+la_phasmitude/data/tmp/
+la_phasmitude/temp/
+
+#Doctrine 2
+la_phasmitude/data/DoctrineORMModule/Proxy/
+la_phasmitude/data/DoctrineORMModule/cache/
+
+# Legacy ZF1
+la_phasmitude/demos/
+la_phasmitude/extras/documentation
+
+# IDEs
+la_phasmitude/.idea/
+la_phasmitude/.project/
