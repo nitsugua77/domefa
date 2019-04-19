@@ -1,0 +1,92 @@
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\navbar.tpl"  on line 43 "<li class="active"><a href="{login.tpl}">Login <span class="sr-only">(current)</span></a></li>"  - Unexpected ".", expected one of: "}"
+Syntax error in template "C:\xampp\la_phasmitude\templates\login_index.tpl"  on line 11 "{$foo $smarty.get.m}" too many shorthand attributes
+Syntax error in template "C:\xampp\la_phasmitude\templates\login_index.tpl"  on line 13 "{/if}" unexpected closing tag
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'login_logged'
+Unable to load template file 'index_index/patients/index.tpl'
+Unable to load template file 'index_index/patients/index.tpl'
+Unable to load template file 'index_index/patients/index.tpl'
+Unable to load template file 'index_index/patients/index.tpl'
+Unable to load template file 'index_index/patients/index.tpl'
+Unable to load template file 'index_index/patients/index.tpl'
+Unable to load template file 'index_index/patients/index.tpl'
+Unable to load template file 'index_index/patients/index.tpl'
+Unable to load template file 'index_bite.tpl'
