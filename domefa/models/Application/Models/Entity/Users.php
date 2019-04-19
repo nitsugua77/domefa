@@ -3,11 +3,12 @@
 namespace Application\Models\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\File;
 
 /**
  * @ORM\Entity("Application\Models\Entity\Users")
  * @ORM\Entity(repositoryClass="Application\Models\Repository\UsersRepository")
- * @ORM\Table("users")
+ * @ORM\Table(name="patient", indexes={@ORM\Index(name="IdMedecin", columns={"IdMedecin"})})
  */
 class Users
 {
@@ -91,12 +92,9 @@ class Users
     protected $sexe;
 
     /**
-     * @var \Medecin
+     * @var integer
      *
-     * @ORM\ManyToOne(targetEntity="Medecin")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="IdMedecin", referencedColumnName="IdMedecin")
-     * })
+     *@ORM\Column(name="IdMedecin", type="integer")
      */
     protected $idmedecin;
 
@@ -334,10 +332,10 @@ class Users
     /**
      * Set idmedecin
      *
-     * @param \Medecin $idmedecin
+     * @param integer $idmedecin
      *
      */
-    public function setIdmedecin(\Medecin $idmedecin = null)
+    public function setIdmedecin($idmedecin)
     {
         $this->idmedecin = $idmedecin;
 
@@ -346,7 +344,7 @@ class Users
     /**
      * Get idmedecin
      *
-     * @return \Medecin
+     * @return integer
      */
     public function getIdmedecin()
     {

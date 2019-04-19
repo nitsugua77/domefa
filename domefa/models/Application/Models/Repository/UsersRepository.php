@@ -32,16 +32,16 @@ class UsersRepository extends EntityRepository
         }
 
         $this->users->setNom($userArray['username']);
-        $this->users->setPrenom("Zemour");
-        $this->users->setAdressemail("zemour@connard.con");
+        $this->users->setPrenom($userArray['prenom']);
+        $this->users->setAdressemail($userArray['email']);
         $this->users->setMotdepasse($userArray['password']);
-        $this->users->setTelephone(0607423410);
-        $this->users->setNumerocartevitale(123456789123456);
+        $this->users->setTelephone($userArray['telephone']);
+        $this->users->setNumerocartevitale($userArray['numeroCarteVitale']);
         $date = new \DateTime();
         $this->users->setDatenaissance($date);
-        $this->users->setGroupesanguin("A");
-        $this->users->setCartemutuelle("zemour.pdf");
-        $this->users->setSexe(0);
+        $this->users->setGroupesanguin($userArray['groupeSanguin']);
+        $this->users->setCartemutuelle($userArray['carteMutuelle']);
+        $this->users->setSexe($userArray['sexe']);
         $this->users->setIdmedecin(1);
 
         return $this->users;

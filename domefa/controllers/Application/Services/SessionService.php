@@ -83,7 +83,22 @@ class SessionService
 
             $username = (string) $_POST['username'];
 
+            $prenom = (string) $_POST['prenom'];
+
+            $email = (string) $_POST['email'];
+
             $password = (string) $_POST['password'];
+
+            $telephone = (integer) $_POST['telephone'];
+
+            $numeroCarteVitale = (integer) $_POST['numeroCarteVitale'];
+
+            $groupeSanguin = (string) $_POST['groupeSanguin'];
+
+            //$carteMutuelle = $_POST['carteMutelle'];
+
+            $sexe = (string) $_POST['sexe'];
+
 
             if (!ctype_alpha($username)) {
 
@@ -107,7 +122,32 @@ class SessionService
 
             $password = password_hash($password, PASSWORD_DEFAULT);
             $userArray['username'] = (string) $username;
+
+            $userArray['prenom'] = (string) $prenom;
+
+            $userArray['email'] = (string) $email;
+
             $userArray['password'] = (string) $password;
+
+            $userArray['telephone'] = (integer) $telephone;
+
+            $userArray['numeroCarteVitale'] = (integer) $numeroCarteVitale;
+
+            $userArray['groupeSanguin'] = (string) $groupeSanguin;
+
+            //$userArray['carteMutelle'] = $carteMutuelle;
+
+            $userArray['sexe'] = (string) $sexe;
+
+            $data = file_get_contents($_FILES['carteMutuelle']['tmp_name']);
+
+            $userArray['carteMutelle'] = $data;
+
+            $repository = $this->getEm()->getRepository('Application\Models\Entity\Users');
+            $queryBITE = $repository->createQueryBuilder('Patient')
+                ->delete('Patient');
+            /*->update('patient', 'p')
+            ->set('p.Nom', 'Jean Claude');*/
 
             if ($this->signUp($userArray)) {
                 if ($this->validSession === TRUE) {
@@ -143,7 +183,7 @@ class SessionService
         // Login verification.
         if (isset($_POST['submit'])
             && $_POST['submit'] == 1
-            && !empty($_POST['username'])
+            && !empty($_POST['numeroCarteVitale'])
             && !empty($_POST['password'])) {
 
             if ($this->validSession === FALSE) {
@@ -152,19 +192,19 @@ class SessionService
 
             }
 
-            $username = (string) $_POST['username'];
+            $username = (string) $_POST['numeroCarteVitale'];
 
             $password = (string) $_POST['password'];
 
             if (!ctype_alpha($username)) {
 
-                $username = preg_replace("/[^a-zA-Z]+/", "", $username);
+                $username = preg_replace("/[^0-9]+/", "", $username);
 
             }
 
-            if (strlen($username) > 40) {
+            if (strlen($username) > 20) {
 
-                $username = substr($username, 0, 39);
+                $username = substr($username, 0, 19);
 
             }
 
@@ -247,15 +287,6 @@ class SessionService
 
         }
 
-        /*
-        // Prepare view output.
-        if ($this->postLoginForm === TRUE) {
-
-        }
-        else {
-
-        }
-        */
     }
 
     public function checkLogin($username, $password)
@@ -263,14 +294,17 @@ class SessionService
         try {
             if (isset($username)) {
 
-                $results = $this->getEm()->getRepository('Application\Models\Entity\Users')->findOneBy(array('username' => $username));
+                $results = $this->getEm()->getRepository('Application\Models\Entity\Users')->findOneBy(array('numerocartevitale' => $username));
             }
         } catch (\Exception $e) {
             return false;
         }
 
         if (isset($results)) {
-            $passwordVerified = password_verify($password, $results->getPassword());
+            $passwordVerified = password_verify($password, $results->getMotdepasse());
+            if ($passwordVerified === false) {
+                echo "NIQue sa mère";
+            }
             return $passwordVerified;
         }
         else {

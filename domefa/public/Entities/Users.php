@@ -5,12 +5,12 @@
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Patient
+ * Users
  *
- * @ORM\Table(name="patient", indexes={@ORM\Index(name="IdMedecin", columns={"IdMedecin"})})
+ * @ORM\Table(name="users", indexes={@ORM\Index(name="IdMedecin", columns={"IdMedecin"})})
  * @ORM\Entity
  */
-class Patient
+class Users
 {
     /**
      * @var integer
@@ -45,7 +45,7 @@ class Patient
     /**
      * @var string
      *
-     * @ORM\Column(name="MotDePasse", type="string", length=255, nullable=false)
+     * @ORM\Column(name="MotDePasse", type="string", length=50, nullable=false)
      */
     private $motdepasse;
 
@@ -80,7 +80,7 @@ class Patient
     /**
      * @var string
      *
-     * @ORM\Column(name="CarteMutuelle", type="blob", nullable=false)
+     * @ORM\Column(name="CarteMutuelle", type="blob", length=65535, nullable=true)
      */
     private $cartemutuelle;
 
@@ -117,7 +117,7 @@ class Patient
      *
      * @param string $nom
      *
-     * @return Patient
+     * @return Users
      */
     public function setNom($nom)
     {
@@ -141,7 +141,7 @@ class Patient
      *
      * @param string $prenom
      *
-     * @return Patient
+     * @return Users
      */
     public function setPrenom($prenom)
     {
@@ -165,7 +165,7 @@ class Patient
      *
      * @param string $adressemail
      *
-     * @return Patient
+     * @return Users
      */
     public function setAdressemail($adressemail)
     {
@@ -189,7 +189,7 @@ class Patient
      *
      * @param string $motdepasse
      *
-     * @return Patient
+     * @return Users
      */
     public function setMotdepasse($motdepasse)
     {
@@ -213,7 +213,7 @@ class Patient
      *
      * @param integer $telephone
      *
-     * @return Patient
+     * @return Users
      */
     public function setTelephone($telephone)
     {
@@ -237,7 +237,7 @@ class Patient
      *
      * @param integer $numerocartevitale
      *
-     * @return Patient
+     * @return Users
      */
     public function setNumerocartevitale($numerocartevitale)
     {
@@ -261,7 +261,7 @@ class Patient
      *
      * @param \DateTime $datenaissance
      *
-     * @return Patient
+     * @return Users
      */
     public function setDatenaissance($datenaissance)
     {
@@ -285,7 +285,7 @@ class Patient
      *
      * @param string $groupesanguin
      *
-     * @return Patient
+     * @return Users
      */
     public function setGroupesanguin($groupesanguin)
     {
@@ -309,7 +309,7 @@ class Patient
      *
      * @param string $cartemutuelle
      *
-     * @return Patient
+     * @return Users
      */
     public function setCartemutuelle($cartemutuelle)
     {
@@ -333,7 +333,7 @@ class Patient
      *
      * @param boolean $sexe
      *
-     * @return Patient
+     * @return Users
      */
     public function setSexe($sexe)
     {
@@ -357,7 +357,7 @@ class Patient
      *
      * @param \Medecin $idmedecin
      *
-     * @return Patient
+     * @return Users
      */
     public function setIdmedecin(\Medecin $idmedecin = null)
     {

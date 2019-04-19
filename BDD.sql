@@ -111,7 +111,7 @@ CREATE TABLE Patient(
         GroupeSanguin      Varchar(3) NOT NULL ,
         CarteMutuelle      Blob ,
         Sexe               tinyint (1) NOT NULL , 
-        IdMedecin      Int NOT NULL ,
+        IdMedecin          Int NOT NULL ,
         PRIMARY KEY (IdPatient) ,
         FOREIGN KEY (IdMedecin) REFERENCES Medecin(IdMedecin)
 );
