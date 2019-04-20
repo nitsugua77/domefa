@@ -1,29 +1,30 @@
 # Composer files
-la_phasmitude/composer.phar
-la_phasmitude/vendor/
+domefa/composer.phar
+domefa/vendor/
 
 # Local configs
-la_phasmitude/config/autoload/*.local.php
-la_phasmitude/config/*.local.php
+domefa/config/autoload/*.local.php
+domefa/config/*.local.php
 
 # Binary gettext files
 *.mo
 
 # Data
-la_phasmitude/data/logs/
-la_phasmitude/data/cache/
-la_phasmitude/data/sessions/
-la_phasmitude/data/tmp/
-la_phasmitude/temp/
+domefa/data/logs/
+domefa/data/cache/
+domefa/data/sessions/
+domefa/data/tmp/
+domefa/temp/
 
 #Doctrine 2
-la_phasmitude/data/DoctrineORMModule/Proxy/
-la_phasmitude/data/DoctrineORMModule/cache/
+domefa/data/DoctrineORMModule/Proxy/
+domefa/data/DoctrineORMModule/cache/
 
 # Legacy ZF1
-la_phasmitude/demos/
-la_phasmitude/extras/documentation
+domefa/demos/
+domefa/extras/documentation
 
 # IDEs
-la_phasmitude/.idea/
+domefa/.idea/
 la_phasmitude/.project/
+domefa/domefa/.idea/

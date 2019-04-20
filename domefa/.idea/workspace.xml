@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0de9dde-ce1b-4d1f-bdce-d5e5592ac768" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../BDD.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../BDD.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Services/SessionService.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Services/SessionService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Application/Models/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Application/Models/Entity/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Application/Models/Repository/UsersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Application/Models/Repository/UsersRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Adresse.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Compterendu.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Departement.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Medecin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Medicament.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Ordonnance.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Patient.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Pharmacien.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Poids.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Region.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Taille.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Vaccin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Vaccinadministre.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Entities/Ville.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_index.tpl" afterDir="false" />
-    </list>
+    <list default="true" id="d0de9dde-ce1b-4d1f-bdce-d5e5592ac768" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +114,7 @@
     <session id="-985010319">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.22" value="1" />
@@ -636,16 +615,15 @@
       <workItem from="1555586464220" duration="11671000" />
       <workItem from="1555606267122" duration="12702000" />
       <workItem from="1555671583774" duration="11033000" />
-      <workItem from="1555689541728" duration="21791000" />
+      <workItem from="1555689541728" duration="22535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273478000" />
+    <option name="totallyTimeSpent" value="274222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31409395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
