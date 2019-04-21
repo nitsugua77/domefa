@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-   <link rel="Stylesheet" href="recherche.css">
+    <link rel="Stylesheet" href="recherche.css">
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDZ_QkVewPHf2Xq5FBeJh8tACHDK0QqVjw" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,12 +24,12 @@
 <main>
     <section>
 
-            <h1>Rechercher un patient <span class="glyphicon glyphicon-search"></span></h1>
-        <div class="box">
+        <h1>Rechercher un médecin <span class="glyphicon glyphicon-search"></span></h1>
+        <div class="box_med">
             <form class="pure-form pure-form-stacked" name="search" method="get" style="width: 100vh">
                 <div class="form-group">
                     <label for="nom">Nom:</label>
-                    <input type="text" required="required" class="form-control" id="nom">
+                    <input type="text"  class="form-control" id="nom">
                 </div>
                 <div class="form-group">
                     <label for="prenom">Prénom:</label>
@@ -38,7 +38,7 @@
 
                 <div class="form-group">
                     <label>Adresse</label>
-                    <input id="user_input_autocomplete_address"  class="form-control" placeholder="Adresse...">
+                    <input id="user_input_autocomplete_address"  class="form-control" placeholder="Adresse" required="required">
                 </div>
 
                 <div  class="form-group" style="display: none">
@@ -47,9 +47,26 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="NumeroCarteVitale">Numéro de Sécurité Sociale:</label>
-                    <input type="number" class="form-control" id="NumeroCarteVitale">
+                    <label for="RPPS">RPPS:</label>
+                    <input type="number" class="form-control" id="RPPS">
                 </div>
+
+                <div class="form-group">
+                    Spécialisation:
+                    <input list="spe" name="Specialisation">
+                    <datalist id="spe">
+                        <option value="Cardiologue">Cardiologue</option>
+                        <option value="Généraliste">Généraliste</option>
+                        <option value="Pédiatre">Pédiatre</option>
+                        <option value="Dentiste">Dentiste</option>
+                        <option value="Neurologue">Neurologue</option>
+                        <option value="Gynécologue">Gynécologue</option>
+                        <option value="Pneumologue">Pneumologue</option>
+                        <option value="Radiologue">Radiologue</option>
+                        <option value="Rhumatologue">Rhumatologue</option>
+                    </datalist>
+                </div>
+
                 <button type="submit" class="pure-button pure-button-primary">Recherche</button>
                 <br>
 

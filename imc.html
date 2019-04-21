@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="calcul-imc.png" style="200px">
+<h1> Calculer son IMC </h1>
+        Mettez votre poids: &nbsp; <input type="text" id="poids" /><br/><br/>
+        Mettez votre taille (en metres) : &nbsp; <input type="text" id="taille" /><br/><br/>
+
+<button id="calculer"> Calculer </button>
+
+<h2 id="sortie"></h2>
+</body>
+<script>
+
+    document.getElementById("calculer").onclick = calculImc;
+
+    function calculImc () {
+
+        var poids = document.getElementById("poids").value;
+        var taille = document.getElementById("taille").value;
+
+        var sousPoids= "Vous êtes en sous poids ";
+        var normal = "vous êtes normal";
+        var surpoids = "vous êtes surpoids";
+        var obese = "vous êtes obèse";
+
+
+        var imc = poids / (taille*taille);
+
+        var imc2 = imc.toFixed(2);
+
+
+
+
+        if (imc < 18) {
+            document.getElementById("sortie").innerHTML = sousPoids + ", votre imc vaut : " + imc2;
+        }
+
+        else if (imc >= 18 && imc < 25) {
+
+            document.getElementById("sortie").innerHTML = normal + ", votre imc vaut : " + imc2;
+        }
+
+        else if (imc > 25 && imc < 30) {
+            document.getElementById("sortie").innerHTML = surpoids + ", votre imc vaut : " + imc2;
+        }
+
+        else if (imc > 30) {
+            document.getElementById("sortie").innerHTML = obese + ", votre imc vaut : " + imc2;
+        }
+
+    }
+
+</script>
+</html>
