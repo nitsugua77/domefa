@@ -10,6 +10,8 @@
     <link rel="Stylesheet" href="home.css">
     <link rel="Stylesheet" href="header.css">
 
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDZ_QkVewPHf2Xq5FBeJh8tACHDK0QqVjw" type="text/javascript"></script>
+
 
 </head>
 
@@ -100,15 +102,13 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="ct">Ville: </label>
-                                                <input type="text" class="form-control" id="ct" placeholder="Enter City" name="City"
-                                                       required>
+                                                <label>Adresse</label>
+                                                <input id="user_input_autocomplete_address" placeholder="Votre adresse...">
                                             </div>
 
-                                            <div class="form-group">
-                                                <label for="ct">Adresse: </label>
-                                                <input type="text" class="form-control" id="ct" placeholder="Adresse" name="adresse"
-                                                       required>
+                                            <div  class="form-group">
+                                                <label>Ville</label>
+                                                <input id="locality" name="locality" disabled>
                                             </div>
 
                                             <div class="form-group">
@@ -205,5 +205,6 @@
         }
     }
 </script>
+<script type="text/javascript" src="google_api.js"></script>
 </body>
 </html>

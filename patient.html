@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,7 @@
     <meta name="keywords" content="Dossier Medical Facilite patient information">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="Stylesheet" href="patient.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--  <link rel="Stylesheet" href="header-footer.css">
@@ -22,17 +23,72 @@
 </header>
 <main>
     <section>
-        <h1 style="font-size:2em">Mr Paul-Antoine INGHELBHRECHT</h1>
-        <div class="card" style="width:400px">
-            <img class="card-img-top" src="client.png" alt="Doctor Image" style="width:100px">
-            <div class="card-body">
-                <h2 class="card-title" style="font-size:1.5em">Sainte Geneviève des Bois</h2>
-                <ul class="card-text">
-                    <li>n° de Sécurité Sociale : 299556564456</li>
-                    <li>Adresse : 30 avenue de la République, <br>94800 Villejuif</li>
-                    <li>Téléphone : 0123456789</li>
-                </ul>
-                <a href="#" class="btn btn-primary">Vos rendez-vous .. ou autres  chose /////</a>
+
+        <div class="dropdown">
+            <button class="dropbtn"> <span class="glyphicon glyphicon-th-list"></span></button>
+            <div class="dropdown-content">
+                <a href="#">Rechercher un médecin</a>
+                <a href="#">Calculer son IMC </a>
+                <a href="#">Vaccins</a>
+                <a href="#">Modifier profil</a>
+            </div>
+        </div>
+
+        <div class="box">
+
+            <div class="card" style="width:700px">
+                <h1 style="font-size:2em">Mr Paul-Antoine INGHELBHRECHT</h1><br>
+                <!--<img class="card-img-top" src="client.png" alt="Doctor Image" style="width:75px">-->
+                <div class="card-body">
+                    <h2 class="card-title" style="font-size:1.5em">Sainte Geneviève des Bois</h2>
+                    <ul class="card-text">
+                        <li>N° de Sécurité Sociale : 299556564456</li>
+                        <li>Adresse : 30 avenue de la République, <br>94800 Villejuif</li>
+                        <li>Téléphone : 0123456789</li>
+                        <li>Mail : pa.ingel@gmail.com</li>
+                        <li>Groupe sanguin : O+</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Vos rendez-vous .. ou autres  chose /////</a>
+
+
+                    <h2>Mon Médecin traitant : </h2>
+                    <img src="medecin.png"> <a href="fiche_medecin.html"> Mr Sunshine</a>
+
+                    <h2> Mes ordonnances </h2>
+
+                    <table>
+                        <tr>
+                            <th>Date de l'ordonnance</th>
+                            <th>Médecin</th>
+                            <th>Ordonnance</th>
+
+                        </tr>
+                        <tr>
+                            <td>02/04/2019</td>
+                            <td>Griffin</td>
+                            <td><a href="client.png">ordonnance.pdf</a></td>
+
+                        </tr>
+                        <tr>
+                            <td>02/04/2019</td>
+                            <td>Griffin</td>
+                            <td><a href="client.png">ordonnance.pdf</a></td>
+
+                        </tr>
+                        <tr>
+                            <td>02/04/2019</td>
+                            <td>Griffin</td>
+                            <td><a href="client.png">ordonnance.pdf</a></td>
+
+                        </tr>
+                        <tr>
+                            <td>02/04/2019</td>
+                            <td>Griffin</td>
+                            <td><a href="client.png">ordonnance.pdf</a></td>
+
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
