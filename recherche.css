@@ -41,6 +41,20 @@
         border: 1px solid black ;
 
     }
+
+    .box_med
+    {
+        margin: auto;
+        display : flex;
+        justify-content: center;
+        width : 750px;
+        height: 475px;
+        box-sizing:border-box;
+        border-radius:25px;
+        border: 1px solid black ;
+        font-size: 20px;
+
+    }
 }
 
 @media all and (min-width: 1024px)
@@ -105,5 +119,19 @@
         font-size: 30px;
 
     }
+    .box_med
+    {
+        margin: auto;
+        display : flex;
+        justify-content: center;
+        width : 900px;
+        height: 700px;
+        box-sizing:border-box;
+        border-radius:25px;
+        border: 1px solid black ;
+        font-size: 30px;
+
+    }
+
 }
 

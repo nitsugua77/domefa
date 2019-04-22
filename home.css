@@ -1,7 +1,16 @@
 
 
+@media all and (max-device-width: 480px)
+{
 
+}
+@media all and (min-width: 481px)
+{
 
+}
+
+@media all and (min-width: 1024px)
+{
     .container1 img {
         width: 120px;
         margin-left: -2px;
@@ -9,23 +18,23 @@
 
 
     .container2 img {
-        width: 1900px;
-        height: 700px;
+        width: 1250px;
+        height: 420px;
 
     }
 
     .overlay {
         position: absolute;
-        bottom: 123px;
+        bottom: 71px;
         background: rgb(0, 0, 0);
         background: rgba(0, 0, 0, 0.5); /* Black see-through */
         color: #f1f1f1;
-        width: 100%;
+        width: 95%;
         transition: .5s ease;
         opacity: 0;
         color: white;
         font-size: 20px;
-        padding: 35px;
+        padding: 30px;
         text-align: justify;
         font-family: "Century Gothic", Serif;
         font-size: 35px;
@@ -39,65 +48,65 @@
 
 
 
-.container3
-{
-    text-align: center;
-    color: #00006D;
-    font-family: "Century Gothic", Serif;
-    font-size: 20px;
-    border-style: none;
-    border-bottom-style: solid;
-    border-width: 0.1px;
+    .container3
+    {
+        text-align: center;
+        color: #00006D;
+        font-family: "Century Gothic", Serif;
+        font-size: 20px;
+        border-style: none;
+        border-bottom-style: solid;
+        border-width: 0.1px;
 
-}
+    }
 
-.container3 p
-{
-    font-weight: bold;
-}
-.container3 img
-{
-    width: 450px;
-}
+    .container3 p
+    {
+        font-weight: bold;
+    }
+    .container3 img
+    {
+        width: 450px;
+    }
 
-.button_container3
-{
-    display: inline-block;
-    border-radius: 12px;
-    border: none;
-    background-color: #EC930A;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 11px;
-    width: 110px;
-    height: 45px;
-    padding: 5px;
-    margin-right: 4px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    transition: all 0.5s;
-    cursor: pointer;
-}
+    .button_container3
+    {
+        display: inline-block;
+        border-radius: 12px;
+        border: none;
+        background-color: #EC930A;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 11px;
+        width: 110px;
+        height: 45px;
+        padding: 5px;
+        margin-right: 4px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
 
-.container4
-{
-    text-align: center;
-    color: #FFFFFF;
-    font-family: "Century Gothic", Serif;
-    background-color: #348aab;
-    font-size: 20px;
-    margin-top: -25px;
-    border-style: none;
-    border-bottom-style: solid;
-    border-width: 0.1px;
-    border-radius: 4px;
+    .container4
+    {
+        text-align: center;
+        color: #FFFFFF;
+        font-family: "Century Gothic", Serif;
+        background-color: #348aab;
+        font-size: 20px;
+        margin-top: -25px;
+        border-style: none;
+        border-bottom-style: solid;
+        border-width: 0.1px;
+        border-radius: 4px;
 
-}
+    }
 
-.container4 p
-{
-    font-weight: bold;
-}
+    .container4 p
+    {
+        font-weight: bold;
+    }
 
 
     /* Always set the map height explicitly to define the size of the div
@@ -114,10 +123,10 @@
 
 
 
-                                                                                                              #locationField, #controls {
-                                                                                                                  position: relative;
-                                                                                                                  width: 480px;
-                                                                                                              }
+    #locationField, #controls {
+        position: relative;
+        width: 480px;
+    }
     #autocomplete {
         position: absolute;
         top: 0px;
@@ -153,5 +162,16 @@
         height: 20px;
         margin-bottom: 2px;
     }
+
+
+}
+
+@media all and (min-width: 1500px)
+{
+
+}
+
+
+
 
 
