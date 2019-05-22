@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0de9dde-ce1b-4d1f-bdce-d5e5592ac768" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/domefa.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Base de données modèles.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Choses à faire.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Controllers/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Controllers/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Controllers/SessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Services/SessionService.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Services/SessionService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Application/Models/Entity/Medecins.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Application/Models/Entity/Medecins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Application/Models/Entity/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Application/Models/Entity/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Application/Models/Repository/UsersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Application/Models/Repository/UsersRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_index.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_index_pro.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_index_pro.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../domefa.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -288,8 +271,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/Application/Services/RechercheService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="368">
+              <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
               <folding>
                 <element signature="e#40#79#0#PHP" expanded="true" />
               </folding>
@@ -672,12 +655,12 @@
       <workItem from="1558020592165" duration="3652000" />
       <workItem from="1558448660977" duration="7666000" />
       <workItem from="1558466403779" duration="2271000" />
-      <workItem from="1558512648718" duration="5343000" />
+      <workItem from="1558512648718" duration="5590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335058000" />
+    <option name="totallyTimeSpent" value="335305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -1057,8 +1040,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/Application/Services/RechercheService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="368">
+          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
           <folding>
             <element signature="e#40#79#0#PHP" expanded="true" />
           </folding>
