@@ -8,13 +8,28 @@
     <meta name="description" content="Résultats de recherche de patients">
     <meta name="keywords" content="Dossier Medical Facilite patient résultat">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Stylesheet" href="account_management_medecin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--  <link rel="Stylesheet" href="header-footer.css">
-      <link rel="Stylesheet" href="AccountManagement.css">
-      <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Hind:700" rel="stylesheet">-->
 </head>
 <body>
 <header>
@@ -22,39 +37,101 @@
 </header>
 <main>
     <section>
-        <h1>//dans le header - DMF</h1>
-        <div class="bloc">
-            <h2>Résultats de votre recherche</h2>
-            <label>Sorted By
-                <select name="Sort By">
-                    <option value="DateA">Par ordre alphabétique (nom)</option>
-                    <option value="DateD">Par ordre de ? </option>
-                </select>
-            </label>
+        <h1>// header - DMF</h1>
 
-            <ul>
-                <li>
-                    <a><h3>Augustin BOUVET</h3></a><br>
-                    <p>n°29454564564<br>
-                        Sainte Geneviève des bois<br>
-                        30 ans<br><br></p>
-                </li>
 
-                <li>
-                    <a><h3>Augustin BOUVET</h3></a><br>
-                    <p>n°29454564564<br>
-                        Sainte Geneviève des bois<br>
-                        30 ans<br><br></p>
-                </li>
+        <div class="container text-center">
+            <h1 class="mt-5 text-white font-weight-light">Résultats de votre recherche </h1>
+            <div class="container">
+                <label>Filtres
+                    <select name="Sort By">
+                        <option value="DateA">Par ordre alphabétique (nom)</option>
+                        <option value="DateD">Par ordre d'âge (croissant)</option>
+                    </select>
+                </label>
+                <div class="row">
+                    <div class="col-lg-10 col-xl-9 mx-auto">
+                        <div class="card card-signin my-5">
+                            <div class="card-body">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Nom</th>
+                                                <th>Prénom</th>
+                                                <th>N° Sécurité Sociale</th>
+                                                <th>Date de naissance</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr data-href="https://google.com" style="cursor:pointer">
+                                                <td>1</td>
+                                                <td>Bouvet</td>
+                                                <td>Augustin</td>
+                                                <td>299456251512521</td>
+                                                <td>28/08/2000</td>
+                                            </tr>
+                                            <tr data-href="https://google.com" style="cursor:pointer">
+                                                <td>2</td>
+                                                <td>Potterie</td>
+                                                <td>Louis</td>
+                                                <td>199458547412545</td>
+                                                <td>24/04/1999</td>
+                                            </tr>
+                                            <tr data-href="https://google.com" style="cursor:pointer">
+                                                <td>3</td>
+                                                <td>Inghel</td>
+                                                <td>Paul</td>
+                                                <td>198458965425654</td>
+                                                <td>12/05/1999</td>
+                                            </tr>
 
-                <li>
-                    <a><h3>Augustin BOUVET</h3></a><br>
-                    <p>n°29454564564<br>
-                        Sainte Geneviève des bois<br>
-                        30 ans<br><br></p>
-                </li>
-            </ul>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-9 mx-auto">
+                    <div class="card card-signin flex-row my-5">
+                        <div class="card-img-left d-none d-md-flex">
+                            <!-- Background image for card set in CSS! -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+
+            jQuery(document).ready(function ($) {
+                $('tr[data-href]').on('click', function () {
+                    window.location = $(this).data("href");
+                });
+            });
+        </script>
+
     </section>
 </main>
 
