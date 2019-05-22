@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="Stylesheet" href="account_management_patient.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Le Dossier Médicale Facilité</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto" >
+                <li class="nav-item dropdown"">
+                    <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="text-decoration: none">
+                        Rechercher un médecin
+                    </a>
+                    <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none">
+                        Calculer son IMC
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="dropdown">
+    <button class="dropbtn"> <span class="glyphicon glyphicon-th-list"></span></button>
+    <div class="dropdown-content">
+        <a href="#">Rechercher un médecin</a>
+        <a href="#">Calculer son IMC </a>
+        <a href="#">Vaccins</a>
+        <a href="#">Modifier profil</a>
+    </div>
+</div>
+
+<div class="container text-center">
+    <h1 class="mt-5 text-white font-weight-light">Bienvenue Paul-Antoine INGHELBHRECHT</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"> Profil </h5>
+
+                            <div class="card-body">
+                                <h2 class="card-title" style="font-size:1.5em">Sainte Geneviève des Bois</h2>
+                                <ul style="list-style: none" class="card-text">
+                                    <li>N° de Sécurité Sociale : 299556564456</li>
+                                    <li>Adresse : 30 avenue de la République, <br>94800 Villejuif</li>
+                                    <li>Téléphone : 0123456789</li>
+                                    <li>Mail : pa.ingel@gmail.com</li>
+                                    <li>Groupe sanguin : O+</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary">Vos rendez-vous </a>
+
+
+                                <h2>Mon Médecin traitant : </h2>
+                                <img src="medecin.png"> <a href="fiche_medecin.html"> Mr Sunshine</a>
+
+                                <h2> Mes ordonnances </h2>
+
+                                <table>
+                                    <tr>
+                                        <th>Date de l'ordonnance</th>
+                                        <th>Médecin</th>
+                                        <th>Ordonnance</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>02/04/2019</td>
+                                        <td>Griffin</td>
+                                        <td><a href="client.png">ordonnance.pdf</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>02/04/2019</td>
+                                        <td>Griffin</td>
+                                        <td><a href="client.png">ordonnance.pdf</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>02/04/2019</td>
+                                        <td>Griffin</td>
+                                        <td><a href="client.png">ordonnance.pdf</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>02/04/2019</td>
+                                        <td>Griffin</td>
+                                        <td><a href="client.png">ordonnance.pdf</a></td>
+
+                                    </tr>
+                                </table>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
