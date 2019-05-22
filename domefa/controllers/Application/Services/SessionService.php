@@ -352,7 +352,7 @@ class SessionService
 
 
     }
-/*
+
     public function checkLogin($username, $password)
     {
         try {
@@ -372,7 +372,7 @@ class SessionService
         else {
             return false;
         }
-    }*/
+    }
 
     public function signUp(array $array)
     {

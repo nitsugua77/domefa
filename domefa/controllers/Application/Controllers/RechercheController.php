@@ -75,7 +75,10 @@ class RechercheController extends Controller
             }
             else if (!empty($_POST['numerocartevitale']) && isset($_POST['submit'])
                 && $_POST['submit'] == 8) {
-                $results = "hello";
+                $results = $this->getUsers()->readCV($_POST['numerocartevitale']);
+                if (is_object($results)) {
+                    $results = [$this->hydrateArray($results)];
+                }
             }
 
             $this->view['results'] = $results;
@@ -94,11 +97,47 @@ class RechercheController extends Controller
         }
     }
 
+    public function account_patientAction()
+    {
+        if (isset($_SESSION['REMOTE_USER']))
+        {
+            $results = $this->getUsers()->readCV($_SESSION['REMOTE_USER']);
+            if (is_object($results)) {
+                $results = $this->hydrateArray($results);
+            }
+            $this->view['results'] = $results;
+
+            $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_account_management.tpl');
+
+        }
+        else
+        {
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_warning.tpl');
+        }
+    }
+
     protected function hydrateArray(Users $object)
     {
         $array['nom'] = $object->getNom();
         $array['prenom'] = $object->getPrenom();
         $array['numerocartevitale'] = $object->getNumerocartevitale();
+        $array['telephone'] = $object->getTelephone();
+        $array['email'] = $object->getAdressemail();
+        $array['datenaissance'] = ($object->getDatenaissance())->format('Y-m-d');
+        $array['groupesanguin'] = $object->getGroupesanguin();
+        $array['medecintraitant'] = $this->getUsers()->findNomPrenomMedecin($object->getIdmedecin());
+        $array['idmedecin'] = $object->getIdmedecin();
+
+        $arrayAdresse = $this->getUsers()->findAdresse($object->getIdpatient());
+        $array['adresse'] = $arrayAdresse['adresse'];
+        $array['codepostal'] = $arrayAdresse['codepostal'];
+        $array['ville'] = $arrayAdresse['ville'];
 
         return $array;
     }

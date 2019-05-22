@@ -46,7 +46,6 @@ class CommentsService
             if (isset($id)) {
                 $results = $this->getEm()->find(Comments::class, $id);
             } else {
-                $results = $this->commentsRepository->findAll();
             }
         } catch (\Exception $e) {
             return false;
