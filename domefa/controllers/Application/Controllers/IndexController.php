@@ -116,16 +116,4 @@ class IndexController extends Controller
         }
     }
 
-    public function recherche_patientAction()
-    {
-        if (isset($_SESSION['REMOTE_USER']))
-        {
-            $this->view['username'] = $_SESSION['REMOTE_USER'];
-        }
-
-        $this->viewObject->assign('view', $this->view);
-
-        $this->viewObject->display('index_recherche_patient.tpl');
-    }
-
 }

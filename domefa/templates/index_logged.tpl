@@ -17,6 +17,7 @@
 
         <h2>Welcome, {$view.username}!<br /><br /><br />You are logged in.</h2><br /><br />
 
+        <a href="{$view.urlbaseaddr}index.php/recherche/index?user={$view.username}"><button class="btn btn-primary btn-lg btn-primary" name="index">RECHERCHE</button></a>
         <a href="{$view.links.Home}?user={$view.username}"><button class="btn btn-primary btn-lg btn-primary" name="index">Home</button></a>
         <br /><br />
         <form action="{$view.urlbaseaddr}index.php/session/index?m=2" method="post">

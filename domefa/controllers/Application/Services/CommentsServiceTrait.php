@@ -16,7 +16,7 @@ trait CommentsServiceTrait
     }
 
     /**
-     * @param mixed $crudComments
+     * @param mixed $Comments
      */
     public function setComments($comments)
     {

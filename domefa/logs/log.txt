@@ -90,3 +90,12 @@ Unable to load template file 'index_index/patients/index.tpl'
 Unable to load template file 'index_index/patients/index.tpl'
 Unable to load template file 'index_index/patients/index.tpl'
 Unable to load template file 'index_bite.tpl'
+An exception occurred while executing 'SELECT t0.IdMedecin AS IdMedecin_1, t0.Nom AS Nom_2, t0.Prenom AS Prenom_3, t0.AdresseMail AS AdresseMail_4, t0.MotDePasse AS MotDePasse_5, t0.Telephone AS Telephone_6, t0.RPPS AS RPPS_7, t0.Specialisation AS Specialisation_8, t0.Signature AS Signature_9 FROM medecin t0 WHERE t0.RPPS = ? LIMIT 1' with params [741]:
+
+SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+An exception occurred while executing 'SELECT t0.IdMedecin AS IdMedecin_1, t0.Nom AS Nom_2, t0.Prenom AS Prenom_3, t0.AdresseMail AS AdresseMail_4, t0.MotDePasse AS MotDePasse_5, t0.Telephone AS Telephone_6, t0.RPPS AS RPPS_7, t0.Specialisation AS Specialisation_8, t0.Signature AS Signature_9 FROM medecin t0 WHERE t0.RPPS = ? LIMIT 1' with params [741]:
+
+SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+An exception occurred while executing 'SELECT t0.IdMedecin AS IdMedecin_1, t0.Nom AS Nom_2, t0.Prenom AS Prenom_3, t0.AdresseMail AS AdresseMail_4, t0.MotDePasse AS MotDePasse_5, t0.Telephone AS Telephone_6, t0.RPPS AS RPPS_7, t0.Specialisation AS Specialisation_8, t0.Signature AS Signature_9 FROM medecin t0 WHERE t0.RPPS = ? LIMIT 1' with params [741]:
+
+SQLSTATE[HY000]: General error: 2006 MySQL server has gone away

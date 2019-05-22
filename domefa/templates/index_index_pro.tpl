@@ -155,20 +155,6 @@
 
 
 
-                                          <!--
-                                                                                       <div class="form-group">
-                                                                                           <label for="ct">Ville: </label>
-                                                                                           <input type="text" class="form-control" id="ct" placeholder="Enter City" name="City"
-                                                                                                  required>
-                                                                                       </div>
-
-                                                                                       <div class="form-group">
-                                                                                           <label for="ct">Adresse: </label>
-                                                                                           <input type="text" class="form-control" id="ct" placeholder="Adresse" name="adresse"
-                                                                                                  required>
-                                                                                       </div>
-                                          -->
-
                                           <!-- Trigger the modal with the submit button -->
                                           <!--<button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Register</button>-->
                                           <button class="btn btn-default login-form-btn center-block" name="submit"

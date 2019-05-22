@@ -40,13 +40,12 @@ class RechercheService
         return true;
     }
 
-    public function read(int $id = null)
+    public function read($nom, $prenom)
     {
         try {
-            if (isset($id)) {
-                $results = $this->getEm()->find(Users::class, $id);
-            } else {
-                $results = $this->commentsRepository->findAll();
+            if (isset($nom) && isset($prenom)) {
+                $results = $this->commentsRepository->findBy(array('nom' => $nom, 'prenom' => $prenom));
+
             }
         } catch (\Exception $e) {
             return false;

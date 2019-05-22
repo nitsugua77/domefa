@@ -26,7 +26,7 @@
 
         <h1>Rechercher un patient <span class="glyphicon glyphicon-search"></span></h1>
         <div class="box">
-            <form class="pure-form pure-form-stacked" name="search" style="width: 100vh" action="{$view.urlbaseaddr}index.php/sessionPro/index" >
+            <form class="pure-form pure-form-stacked" name="search" style="width: 100vh" action="{$view.urlbaseaddr}index.php/recherche/recherche" method="post">
                 <div class="form-group">
                     <label for="nom">Nom : </label>
                     <input type="text" class="form-control" id="nom" placeholder="Nom"
@@ -42,7 +42,7 @@
                            data-error="Invalid character" required>
                 </div>
 
-                <button class="pure-button pure-button-primary" name="submit" type="submit" value="12">Rechercher</button>
+                <button class="pure-button pure-button-primary" name="submit" type="submit" value="10">Rechercher</button>
             </form>
         </div>
     </section>

@@ -73,8 +73,8 @@ class SessionService
             }
 
             // Sign up patient verification
-            if (isset($_POST['submit'])
-                && $_POST['submit'] == 4
+                if (isset($_POST['submit'])
+                    && $_POST['submit'] == 4
                 && !empty($_POST['username'])
                 && !empty($_POST['password'])
                 && !empty($_POST['prenom'])
@@ -352,7 +352,7 @@ class SessionService
 
 
     }
-
+/*
     public function checkLogin($username, $password)
     {
         try {
@@ -372,7 +372,7 @@ class SessionService
         else {
             return false;
         }
-    }
+    }*/
 
     public function signUp(array $array)
     {
