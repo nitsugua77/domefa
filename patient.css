@@ -21,6 +21,15 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 {
     display : flex;
     justify-content: center;
+    margin:auto;
+    text-align: center;
+    width: 570px;
+    height: 750px;
+    border: 1px solid black ;
+    background-color: #f0fffa;
+    border-radius: 10px;
+
+
 }
 
 
@@ -63,4 +72,13 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 .dropdown:hover .dropbtn {
     background-color: #EC930A;
+}
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

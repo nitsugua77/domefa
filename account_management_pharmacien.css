@@ -48,7 +48,7 @@
 
 body {
     background: #007bff;
-    background: linear-gradient(to right, #43cea2, #185a9d);
+    background: linear-gradient(to right, #1d976c, #93f9b9);
 }
 
 img
@@ -139,6 +139,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     list-style: none;
     text-decoration: none;
 }
+
 .grouped {
     list-style: none;
     padding: 10px;
@@ -161,5 +162,3 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     color: #000000;
     font-size: 18px;
 }
-
-
