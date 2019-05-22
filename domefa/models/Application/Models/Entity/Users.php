@@ -8,7 +8,7 @@ use phpDocumentor\Reflection\File;
 /**
  * @ORM\Entity("Application\Models\Entity\Users")
  * @ORM\Entity(repositoryClass="Application\Models\Repository\UsersRepository")
- * @ORM\Table(name="patient", indexes={@ORM\Index(name="IdMedecin", columns={"IdMedecin"})})
+ * @ORM\Table(name="patient")
  */
 class Users
 {
@@ -78,7 +78,7 @@ class Users
     protected $groupesanguin;
 
     /**
-     * @var string
+
      *
      * @ORM\Column(name="CarteMutuelle", type="blob", length=65535, nullable=true)
      */
@@ -97,7 +97,6 @@ class Users
      *@ORM\Column(name="IdMedecin", type="integer")
      */
     protected $idmedecin;
-
 
     /**
      * Get idpatient
@@ -288,7 +287,7 @@ class Users
     /**
      * Set cartemutuelle
      *
-     * @param string $cartemutuelle
+     * @param mixed $cartemutuelle
      *
      */
     public function setCartemutuelle($cartemutuelle)
@@ -300,7 +299,7 @@ class Users
     /**
      * Get cartemutuelle
      *
-     * @return string
+     * @return mixed
      */
     public function getCartemutuelle()
     {

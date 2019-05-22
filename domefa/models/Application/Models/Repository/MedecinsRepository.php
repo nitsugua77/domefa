@@ -2,13 +2,13 @@
 
 namespace Application\Models\Repository;
 
-use Application\Models\Entity\Users;
+use Application\Models\Entity\Medecins;
 use Doctrine\ORM\EntityRepository;
 
-class UsersRepository extends EntityRepository
+class MedecinsRepository extends EntityRepository
 {
     protected $users;
-    
+
     public function save(array $userArray, $users = null)
     {
         $this->users = $this->setData($userArray, $users);
@@ -23,10 +23,10 @@ class UsersRepository extends EntityRepository
         return true;
     }
 
-    public function setData(array $userArray, users $users = null)
+    public function setData(array $userArray, Medecins $users = null)
     {
         if (!$users) {
-            $this->users = new Users();
+            $this->users = new Medecins();
         } else {
             $this->users = $users;
         }
@@ -36,12 +36,10 @@ class UsersRepository extends EntityRepository
         $this->users->setAdressemail($userArray['email']);
         $this->users->setMotdepasse($userArray['password']);
         $this->users->setTelephone($userArray['telephone']);
-        $this->users->setNumerocartevitale($userArray['numeroCarteVitale']);
-        $this->users->setDatenaissance($userArray['dateNaissance']);
-        $this->users->setGroupesanguin($userArray['groupeSanguin']);
-        $this->users->setCartemutuelle($userArray['carteMutuelle']);
-        $this->users->setSexe($userArray['sexe']);
-        $this->users->setIdmedecin($userArray['Idmedecin']);
+        $this->users->setRpps($userArray['RPPS']);
+        $this->users->setSignature($userArray['signature']);
+        $this->users->setSpecialisation($userArray['specialisation']);
+
 
         return $this->users;
     }

@@ -4,11 +4,11 @@ namespace Application\Controllers;
 
 use \Ascmvc\AbstractApp;
 use \Ascmvc\Mvc\Controller;
-use Application\Services\SessionService;
-use Application\Models\Entity\Users;
+use Application\Services\SessionProService;
+use Application\Models\Entity\Medecins;
 
 
-class SessionController extends Controller
+class SessionProController extends Controller
 {
 
 
@@ -24,11 +24,11 @@ class SessionController extends Controller
 
         $em = $app->getServiceManager()->getRegisteredService('em1');
 
-        $users = new Users();
+        $users = new Medecins();
 
-        $sessionService = new SessionService($users, $em);
+        $sessionProService = new SessionProService($users, $em);
 
-        $app->getServiceManager()->addRegisteredService('SessionService', $sessionService);
+        $app->getServiceManager()->addRegisteredService('SessionProService', $sessionProService);
     }
 
 
@@ -51,7 +51,7 @@ class SessionController extends Controller
 
             $this->viewObject->assign('view', $this->view);
 
-            $this->viewObject->display('index_index.tpl');
+            $this->viewObject->display('index_index_pro.tpl');
         }
     }
 

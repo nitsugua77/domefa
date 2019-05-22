@@ -69,7 +69,6 @@ class CommentController extends Controller
             $this->viewObject->display('index_warning.tpl');
         }
 
-
     }
 
     protected function readComments()

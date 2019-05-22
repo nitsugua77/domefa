@@ -30,7 +30,7 @@ class IndexController extends Controller
                 $baseConfig['URLBASEADDR'] . 'css/dashboard.css',*/
                 $baseConfig['URLBASEADDR'] . 'css/home.css',
                 $baseConfig['URLBASEADDR'] . 'css/header.css',
-
+                $baseConfig['URLBASEADDR'] . 'css/recherche.css',
             ],
             'js' =>
             [
@@ -40,11 +40,10 @@ class IndexController extends Controller
             ],
             'links' =>
             [
-                'Home' => $baseConfig['URLBASEADDR'] . 'index.php',
+                'Home' => $baseConfig['URLBASEADDR'] . 'index.php/index',
                 'Voyages_Park_Omega' => $baseConfig['URLBASEADDR'] . 'index.php/index/voyages_park_omega',
                 'Index_pro' => $baseConfig['URLBASEADDR'] . 'index.php/index/index_pro',
                 'Image' => $baseConfig['URLBASEADDR'] . 'img',
-
             ],
 
         ];
@@ -115,6 +114,18 @@ class IndexController extends Controller
 
             $this->viewObject->display('index_warning.tpl');
         }
+    }
+
+    public function recherche_patientAction()
+    {
+        if (isset($_SESSION['REMOTE_USER']))
+        {
+            $this->view['username'] = $_SESSION['REMOTE_USER'];
+        }
+
+        $this->viewObject->assign('view', $this->view);
+
+        $this->viewObject->display('index_recherche_patient.tpl');
     }
 
 }

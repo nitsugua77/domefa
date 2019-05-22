@@ -2,13 +2,12 @@
 
 namespace Application\Services;
 
-use Application\Models\Entity\Users;
+use Application\Models\Entity\Medecins;
 use Application\Models\Traits\DoctrineTrait;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\ClassMetadata;
-use http\Exception;
 
-class SessionService
+class SessionProService
 {
 
     use DoctrineTrait;
@@ -23,7 +22,7 @@ class SessionService
 
     protected $redirectCounter;
 
-    public function __construct(Users $users, EntityManager $em)
+    public function __construct(Medecins $users, EntityManager $em)
     {
         if (!isset($_SESSION['REMOTE_USER']))
         {
@@ -72,31 +71,26 @@ class SessionService
 
             }
 
-            // Sign up patient verification
+            // Sign up pro verification
             if (isset($_POST['submit'])
-                && $_POST['submit'] == 4
+                && $_POST['submit'] == 5
                 && !empty($_POST['username'])
                 && !empty($_POST['password'])
                 && !empty($_POST['prenom'])
                 && !empty($_POST['email'])
                 && !empty($_POST['telephone'])
-                && !empty($_POST['numeroCarteVitale'])
-                && !empty($_POST['groupeSanguin'])
-                && !empty($_POST['sexe'])
-                && !empty($_POST['dateNaissance'])
-                && !empty($_POST['RPPSTraitant'])
+                && !empty($_POST['RPPS'])
+                && !empty($_POST['specialisation'])
                 && !empty($_POST['numerores'])
                 && !empty($_POST['rue'])
                 && !empty($_POST['nomville'])
-                && !empty($_POST['codepostal']))
-            {
+                && !empty($_POST['codepostal'])) {
 
                 if ($this->validSession === FALSE) {
 
                     $this->validSession = $this->session_secure_init();
 
                 }
-
                 $username = (string) $_POST['username'];
 
                 $prenom = (string) $_POST['prenom'];
@@ -107,15 +101,9 @@ class SessionService
 
                 $telephone = (integer) $_POST['telephone'];
 
-                $numeroCarteVitale = (integer) $_POST['numeroCarteVitale'];
+                $rpps = (integer) $_POST['RPPS'];
 
-                $groupeSanguin = (string) $_POST['groupeSanguin'];
-
-                $sexe = (string) $_POST['sexe'];
-
-                $dateNaissance = $_POST['dateNaissance'];
-
-                $rppstraitant = (integer) $_POST['RPPSTraitant'];
+                $specialisation = (string) $_POST['specialisation'];
 
                 $rue = (string) $_POST['rue'];
 
@@ -126,6 +114,7 @@ class SessionService
                 $ville = (string) $_POST['nomville'];
 
                 $codepostal = (integer) $_POST['codepostal'];
+
 
                 if (!ctype_alpha($username)) {
 
@@ -158,17 +147,13 @@ class SessionService
 
                 $userArray['telephone'] = (integer) $telephone;
 
-                $userArray['numeroCarteVitale'] = (integer) $numeroCarteVitale;
+                $userArray['RPPS'] = (integer) $rpps;
 
-                $userArray['groupeSanguin'] = (string) $groupeSanguin;
+                $userArray['specialisation'] = (string) $specialisation;
 
-                $userArray['sexe'] = (string) $sexe;
+                $data = file_get_contents($_FILES['signature']['tmp_name']);
 
-                $userArray['dateNaissance'] = \DateTime::createFromFormat('Y-m-d', $dateNaissance);
-
-                $data = file_get_contents($_FILES['carteMutuelle']['tmp_name']);
-
-                $userArray['carteMutuelle'] = $data;
+                $userArray['signature'] = $data;
 
                 $userArray['numeroappart'] = $numeroappart;
 
@@ -180,19 +165,11 @@ class SessionService
 
                 $userArray['codepostal'] = $codepostal;
 
+                if ($this->signUp($userArray)) {
 
-                // On recherche un médecin qui possède le RPPS saisis
-                $results = $this->getEm()->getRepository('Application\Models\Entity\Medecins')->findOneBy(array('rpps' => $rppstraitant));
-
-                if(isset($results)){
-                    $userArray['Idmedecin'] = $results->getIdmedecin();
-                }
-
-                if (isset($results) && $this->signUp($userArray)) {
-
-                    // On récupère l'objet patient que l'on vient de créer
-                    $resultsUser = $this->getEm()->getRepository('Application\Models\Entity\Users')->findOneBy(array('numerocartevitale' => $userArray['numeroCarteVitale']));
-                    $userArray['idpatient'] = $resultsUser->getIdpatient();
+                    // On récupère l'objet médecin que l'on vient de créer
+                    $resultsUser = $this->getEm()->getRepository('Application\Models\Entity\Medecins')->findOneBy(array('rpps' => $userArray['RPPS']));
+                    $userArray['idmedecin'] = $resultsUser->getIdmedecin();
 
                     // On regarde si la ville est déjà présente dans la BDD
                     $resultsVille = $this->getEm()->getRepository('Application\Models\Entity\Ville')->findOneBy(array('nom' => $userArray['nomville'], 'codepostal' => $userArray['codepostal']));
@@ -224,7 +201,7 @@ class SessionService
                     } else {
 
                         $this->validSession = $this->session_obliterate();
-                            $GLOBALS['errormessage'] = 3;
+                        $GLOBALS['errormessage'] = 3;
                         $this->postLoginForm = TRUE;
 
                     }
@@ -241,11 +218,10 @@ class SessionService
 
             }
 
-
             // Login verification.
             if (isset($_POST['submit'])
-                && $_POST['submit'] == 1
-                && !empty($_POST['numeroCarteVitale'])
+                && $_POST['submit'] == 12
+                && !empty($_POST['RPPS'])
                 && !empty($_POST['password'])) {
 
                 if ($this->validSession === FALSE) {
@@ -254,7 +230,7 @@ class SessionService
 
                 }
 
-                $username = (string) $_POST['numeroCarteVitale'];
+                $username = (string) $_POST['RPPS'];
 
                 $password = (string) $_POST['password'];
 
@@ -348,8 +324,8 @@ class SessionService
                 $this->postLoginForm = TRUE;
 
             }
-        }
 
+        }
 
     }
 
@@ -357,14 +333,15 @@ class SessionService
     {
         try {
             if (isset($username)) {
-                $results = $this->getEm()->getRepository('Application\Models\Entity\Users')->findOneBy(array('numerocartevitale' => $username));
 
+                $results = $this->getEm()->getRepository('Application\Models\Entity\Medecins')->findOneBy(array('rpps' => $username));
             }
         } catch (\Exception $e) {
             return false;
         }
 
         if (isset($results)) {
+
             $passwordVerified = password_verify($password, $results->getMotdepasse());
 
             return $passwordVerified;
@@ -377,14 +354,13 @@ class SessionService
     public function signUp(array $array)
     {
         try {
-            $this->getEm()->getRepository('Application\Models\Entity\Users')->save($array);
+            $this->getEm()->getRepository('Application\Models\Entity\Medecins')->save($array);
         } catch (\Exception $e) {
             return false;
         }
 
         return true;
     }
-
 
     function session_obliterate()
     {

@@ -71,8 +71,8 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="fn"> Prénoms : </label>
-                                            <input type="text" class="form-control" id="fn" placeholder="Prénoms"
+                                            <label for="fn"> Prénom : </label>
+                                            <input type="text" class="form-control" id="fn" placeholder="Prénom"
                                                    name="prenom" pattern="^[a-zA-Z]+$" maxlength="40"
                                                    data-error="Invalid character" required>
                                         </div>
@@ -112,6 +112,47 @@
                                         </div>
 
                                         <div class="form-group">
+                                            <label for="RPPSTraitant">RPPS du médecin traitant</label>
+                                            <input type="text" placeholder="RPPS du médecin traitant"
+                                                   name="RPPSTraitant" pattern="^[0-9]+$" maxlength="15" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="rue"> Rue </label>
+                                            <input type="text" class="form-control" id="fn" placeholder="Rue"
+                                                   name="rue" maxlength="100"
+                                                   data-error="Invalid character" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="Numéro de résidence"> Numéro de résidence </label>
+                                            <input type="text" class="form-control" id="fn" placeholder="Numéro de Résidence"
+                                                   name="numerores" pattern="^[0-9]+$" maxlength="15"
+                                                   data-error="Invalid character" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="numeroappart"> Numéro d'appartement (non obligatoire) </label>
+                                            <input type="text" class="form-control" id="fn" placeholder="Numéro d'appartement"
+                                                   name="numeroappart" pattern="^[0-9]+$" maxlength="15"
+                                                   data-error="Invalid character">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="ville"> Ville </label>
+                                            <input type="text" class="form-control" id="fn" placeholder="Ville"
+                                                   name="nomville" pattern="^[a-zA-Z]+$" maxlength="100"
+                                                   data-error="Invalid character" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="codepostal"> Code postal </label>
+                                            <input type="text" class="form-control" id="fn" placeholder="Code postal"
+                                                   name="codepostal" pattern="^[0-9]+$" maxlength="5"
+                                                   data-error="Invalid character" required>
+                                        </div>
+
+                                        <div class="form-group">
                                             <label>Date de Naissance:
                                                 <input type="date" name="dateNaissance">
                                             </label><br>
@@ -141,20 +182,6 @@
                                                 <input type="radio" name="sexe" value="female"> Female
                                             </label><br>
                                         </div>
-
-                                        <!--
-                                                                                     <div class="form-group">
-                                                                                         <label for="ct">Ville: </label>
-                                                                                         <input type="text" class="form-control" id="ct" placeholder="Enter City" name="City"
-                                                                                                required>
-                                                                                     </div>
-
-                                                                                     <div class="form-group">
-                                                                                         <label for="ct">Adresse: </label>
-                                                                                         <input type="text" class="form-control" id="ct" placeholder="Adresse" name="adresse"
-                                                                                                required>
-                                                                                     </div>
-                                        -->
 
                                         <!-- Trigger the modal with the submit button -->
                                         <!--<button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Register</button>-->

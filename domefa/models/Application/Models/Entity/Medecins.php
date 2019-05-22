@@ -3,80 +3,79 @@
 namespace Application\Models\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\File;
 
 /**
- * Medecin
- *
+ * @ORM\Entity("Application\Models\Entity\Medecins")
+ * @ORM\Entity(repositoryClass="Application\Models\Repository\MedecinsRepository")
  * @ORM\Table(name="medecin")
- * @ORM\Entity("Application\Models\Entity\Medecins);
  */
 class Medecins
 {
     /**
      * @var integer
      *
-     * @ORM\Column(name="IdMedecin", type="integer", nullable=false)
+     * @ORM\Column(name="IdMedecin", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idmedecin;
+    protected $idmedecin;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Nom", type="string", length=50, nullable=false)
+     * @ORM\Column(name="Nom", type="string", length=50)
      */
-    private $nom;
+    protected $nom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Prenom", type="string", length=50, nullable=false)
+     * @ORM\Column(name="Prenom", type="string", length=50)
      */
-    private $prenom;
+    protected $prenom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="AdresseMail", type="string", length=50, nullable=false)
+     * @ORM\Column(name="AdresseMail", type="string", length=50)
      */
-    private $adressemail;
+    protected $adressemail;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="MotDePasse", type="string", length=50, nullable=false)
+     * @ORM\Column(name="MotDePasse", type="string", length=50)
      */
-    private $motdepasse;
+    protected $motdepasse;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="Telephone", type="integer", nullable=false)
+     * @ORM\Column(name="Telephone", type="integer")
      */
-    private $telephone;
+    protected $telephone;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="RPPS", type="integer", nullable=false)
+     * @ORM\Column(name="RPPS", type="integer")
      */
-    private $rpps;
+    protected $rpps;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Specialisation", type="string", length=100, nullable=false)
+     * @ORM\Column(name="Specialisation", type="string", length=100)
      */
-    private $specialisation;
+    protected $specialisation;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Signature", type="blob", length=65535, nullable=false)
+     * @ORM\Column(name="Signature", type="blob", length=65535, nullable=true)
      */
-    private $signature;
-
+    protected $signature;
 
     /**
      * Get idmedecin
@@ -245,7 +244,7 @@ class Medecins
     /**
      * Set signature
      *
-     * @param string $signature
+     * @param mixed $signature
      *
      */
     public function setSignature($signature)
@@ -257,11 +256,13 @@ class Medecins
     /**
      * Get signature
      *
-     * @return string
+     * @return mixed
      */
     public function getSignature()
     {
         return $this->signature;
     }
-}
 
+
+
+}
