@@ -64,28 +64,63 @@
                         <h5 class="card-title text-center" style="font-size: 30px;"> Rechercher un médecin </h5>
 
 
-                        form class="form-signin">
-                        <div class="form-label-group">
-                            <label for="inputEmail">Email address</label>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                        <form class="form-signin">
+
+                            <div class="form-label-group">
+                                <label label for="nom">Nom</label>
+                                <input type="text" id="nom" class="form-control" placeholder="Nom" required autofocus>
+                                <br>
+
+                            </div>
+
+                            <div class="form-label-group">
+                                <label label for="prenom">Prénom</label>
+                                <input type="text" id="prenom" class="form-control" placeholder="Prénom" required autofocus>
+                                <br>
+
+                            </div>
+
+                            <div class="form-label-group">
+                                <label>Adresse</label>
+                                <input id="user_input_autocomplete_address"  class="form-control" placeholder="Adresse" required="required">
+                                <br>
+                            </div>
+
+                            <div class="form-label-group" style="display: none">
+                                <label>Ville</label>
+                                <input id="locality" name="locality"  class="form-control" disabled>
+                                <br>
+                            </div>
+
+                            <div class="form-label-group">
+                                <label for="RPPS">RPPS</label>
+                                <input type="number" class="form-control" id="RPPS">
+                                <br>
+                            </div>
+
+                            <div class="form-label-group">
+                                <label for="spe">Spécialisation </label>
+                                <br>
+                                <input list="spe"  class="form-control" name="Specialisation">
+                                <datalist id="spe">
+                                    <option value="Cardiologue">Cardiologue</option>
+                                    <option value="Généraliste">Généraliste</option>
+                                    <option value="Pédiatre">Pédiatre</option>
+                                    <option value="Dentiste">Dentiste</option>
+                                    <option value="Neurologue">Neurologue</option>
+                                    <option value="Gynécologue">Gynécologue</option>
+                                    <option value="Pneumologue">Pneumologue</option>
+                                    <option value="Radiologue">Radiologue</option>
+                                    <option value="Rhumatologue">Rhumatologue</option>
+                                </datalist>
+                                <br>
+                            </div>
+
+
                             <br>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"> Rechercher </button>
+                            <hr class="my-4">
 
-                        </div>
-
-                        <div class="form-label-group">
-                            <label for="inputPassword">Password</label>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-
-                        </div>
-
-                        <div class="custom-control custom-checkbox mb-3">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Remember password</label>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
-                        <hr class="my-4">
-                        <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
-                        <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
                         </form>
 
 
