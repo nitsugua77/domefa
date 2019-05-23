@@ -24,61 +24,14 @@
         <a class="item" href="accueil_particulier.html"><img src="DMF.png" alt="Dossier Médical Facilité"
                                                              style="width:70px"></a>
         <a href="accueil_pro.html">
-            <button class="button_espace_pro"> Vers Espace Pro</button>
+            <button class="button_espace_pro" > Vers Espace Pro </button>
         </a>
+
         <h1 class="title">Le Dossier Médical Facilité</h1>
         <div class="grouped">
 
-
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button class="button_header"
-                                    onclick="document.getElementById('id01').style.display='block'"
-                                    style="width:auto;"><span> Se connecter </span></button>
-                            <div id="id01" class="modal">
-                                <form class="modal-content animate" action="/action_page.php">
-                                    <div class="imgcontainer">
-                                <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                                      title="Close Modal">&times;</span>
-                                        <img src="client.png" id="img_client" alt="Avatar" class="avatar">
-                                    </div>
-
-                                    <div class="container">
-                                        <label for="NumeroCarteVitale"><b>Numero Securite sociale</b></label>
-                                        <input id="NumeroCarteVitale" type="text" placeholder="Securite sociale"
-                                               name="NumeroCarteVitale" required>
-
-                                        <label for="psw"><b>Mot de passe</b></label>
-                                        <input id="psw" type="password" placeholder="Mot de passe" name="psw" required>
-
-                                        <button type="submit" class="btn-info">Se connecter
-                                        </button>
-                                        <button type="button"
-                                                onclick="document.getElementById('id01').style.display='none'"
-                                                class="cancelbtn">Cancel
-                                        </button>
-                                    </div>
-
-                                    <div class="container" style="background-color:#f1f1f1">
-
-
-                                    </div>
-                                </form>
-                            </div>
-
-                            <button class="button_header" style="width:auto"
-                                    onclick="window.location = 'inscriptionpatient.html'">
-                                <span> S'inscrire </span></button>
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+                            <button class="button_header" style="width:auto"> <a href="connexion_patient.html" style="text-decoration: none; color: white;"> Se connecter </a></button>
+                            <button class="button_header" style="width:auto"><a href="inscriptionpatient.html" style="text-decoration: none; color: white;"> S'inscrire </a> </button>
         </div>
     </div>
 
