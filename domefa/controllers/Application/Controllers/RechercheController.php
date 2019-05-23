@@ -76,7 +76,7 @@ class RechercheController extends Controller
                 }
             }
             else if (!empty($_POST['numerocartevitale']) && isset($_POST['submit'])
-                && $_POST['submit'] == 8) {
+                && $_POST['submit'] == 11) {
                 $results = $this->getUsers()->readCV($_POST['numerocartevitale']);
                 if (is_object($results)) {
                     $results = [$this->hydrateArray($results)];

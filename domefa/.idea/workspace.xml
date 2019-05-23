@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0de9dde-ce1b-4d1f-bdce-d5e5592ac768" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Controllers/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/Application/Controllers/RechercheController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Controllers/RechercheController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Services/RechercheService.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Services/RechercheService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_account_management.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_account_management.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_logged.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_logged.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index_account_management_medecin.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_account_management_medecin.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index_recherche_patient.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_recherche_patient.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index_resultats.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_resultats.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +158,7 @@
           <entry key="php" value="247" />
           <entry key="png" value="5" />
           <entry key="sql" value="2" />
-          <entry key="tpl" value="84" />
+          <entry key="tpl" value="87" />
           <entry key="txt" value="2" />
           <entry key="yml" value="1" />
         </counts>
@@ -175,7 +172,7 @@
           <entry key="PHP" value="247" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="SQL" value="2" />
-          <entry key="Smarty" value="82" />
+          <entry key="Smarty" value="85" />
           <entry key="SmartyConfig" value="1" />
           <entry key="YAML" value="1" />
         </counts>
@@ -183,17 +180,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="9" />
-          <entry key="php" value="9221" />
+          <entry key="php" value="9224" />
           <entry key="sql" value="1" />
-          <entry key="tpl" value="1946" />
+          <entry key="tpl" value="2150" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="9" />
-          <entry key="PHP" value="9221" />
+          <entry key="PHP" value="9224" />
           <entry key="SQL" value="1" />
-          <entry key="Smarty" value="1946" />
+          <entry key="Smarty" value="2150" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -208,7 +205,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/Application/Services/RechercheService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
+            <state relative-caret-position="15">
               <caret line="130" column="50" selection-start-line="130" selection-start-column="50" selection-end-line="130" selection-end-column="50" />
               <folding>
                 <element signature="e#40#76#0#PHP" expanded="true" />
@@ -229,8 +226,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/Application/Controllers/RechercheController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="214" column="61" selection-start-line="214" selection-start-column="61" selection-end-line="214" selection-end-column="61" />
+            <state relative-caret-position="289">
+              <caret line="79" column="29" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
               <folding>
                 <element signature="e#44#86#0#PHP" expanded="true" />
               </folding>
@@ -238,20 +235,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index_logged.tpl">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/index_account_management_medecin.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="20" />
+            <state relative-caret-position="555">
+              <caret line="131" column="101" selection-start-line="131" selection-start-column="101" selection-end-line="131" selection-end-column="101" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index_account_management_medecin.tpl">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index_recherche_patient.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="143" column="36" selection-start-line="143" selection-start-column="36" selection-end-line="143" selection-end-column="36" />
+            <state relative-caret-position="422">
+              <caret line="54" column="101" selection-start-line="54" selection-start-column="101" selection-end-line="54" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index_resultats.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -366,9 +372,7 @@
         <option value="$PROJECT_DIR$/templates/index_index_pro.tpl" />
         <option value="$PROJECT_DIR$/templates/recherche_resultats.tpl" />
         <option value="$PROJECT_DIR$/controllers/Application/Controllers/CommentController.php" />
-        <option value="$PROJECT_DIR$/templates/index_resultats.tpl" />
         <option value="$PROJECT_DIR$/controllers/Application/Services/SessionProService.php" />
-        <option value="$PROJECT_DIR$/templates/index_recherche_patient.tpl" />
         <option value="$PROJECT_DIR$/controllers/Application/Services/CommentsService.php" />
         <option value="$PROJECT_DIR$/controllers/Application/Services/SessionService.php" />
         <option value="$PROJECT_DIR$/models/Application/Models/Repository/MedecinsRepository.php" />
@@ -380,6 +384,8 @@
         <option value="$PROJECT_DIR$/templates/navbar_pro.tpl" />
         <option value="$PROJECT_DIR$/templates/index_logged.tpl" />
         <option value="$PROJECT_DIR$/controllers/Application/Services/RechercheService.php" />
+        <option value="$PROJECT_DIR$/templates/index_resultats.tpl" />
+        <option value="$PROJECT_DIR$/templates/index_recherche_patient.tpl" />
         <option value="$PROJECT_DIR$/controllers/Application/Controllers/RechercheController.php" />
         <option value="$PROJECT_DIR$/templates/index_account_management_medecin.tpl" />
       </list>
@@ -629,12 +635,12 @@
       <workItem from="1558466403779" duration="2271000" />
       <workItem from="1558512648718" duration="5910000" />
       <workItem from="1558534069895" duration="27599000" />
-      <workItem from="1558599147830" duration="5499000" />
+      <workItem from="1558599147830" duration="6339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368723000" />
+    <option name="totallyTimeSpent" value="369563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -904,20 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index_recherche_patient.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index_resultats.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Application/Models/Entity/Medecins.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -978,30 +970,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/Application/Services/RechercheService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="130" column="50" selection-start-line="130" selection-start-column="50" selection-end-line="130" selection-end-column="50" />
-          <folding>
-            <element signature="e#40#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/Application/Controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/Application/Controllers/RechercheController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="214" column="61" selection-start-line="214" selection-start-column="61" selection-end-line="214" selection-end-column="61" />
-          <folding>
-            <element signature="e#44#86#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1019,10 +991,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index_resultats.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index_recherche_patient.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="54" column="101" selection-start-line="54" selection-start-column="101" selection-end-line="54" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/Application/Services/RechercheService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="130" column="50" selection-start-line="130" selection-start-column="50" selection-end-line="130" selection-end-column="50" />
+          <folding>
+            <element signature="e#40#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/Application/Controllers/RechercheController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="79" column="29" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+          <folding>
+            <element signature="e#44#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index_account_management_medecin.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="143" column="36" selection-start-line="143" selection-start-column="36" selection-end-line="143" selection-end-column="36" />
+        <state relative-caret-position="555">
+          <caret line="131" column="101" selection-start-line="131" selection-start-column="101" selection-end-line="131" selection-end-column="101" />
         </state>
       </provider>
     </entry>

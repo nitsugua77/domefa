@@ -36,6 +36,8 @@
                     <th>Nom</th>
                     <th>Prénom</th>
                     <th>Numéro de carte vitale</th>
+                    <th>Telephone</th>
+                    <th>Adresse</th>
 
                 </tr>
                 </thead>
@@ -44,7 +46,8 @@
                         <td>{$user.nom}</td>
                         <td>{$user.prenom}</td>
                         <td>{$user.numerocartevitale}</td>
-
+                        <td>{$user.telephone}</td>
+                        <td>{$user.adresse}, {$user.codepostal} {$user.ville}</td>
                     </tr>
                 {/foreach}
             </table>

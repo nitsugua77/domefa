@@ -44,6 +44,16 @@
 
                 <button class="pure-button pure-button-primary" name="submit" type="submit" value="10">Rechercher</button>
             </form>
+            <form class="pure-form pure-form-stacked" name="search" style="width: 100vh" action="{$view.urlbaseaddr}index.php/recherche/recherche" method="post">
+                <div class="form-group">
+                    <label for="fn"> Numéro carte vitale : </label>
+                    <input type="text" class="form-control" id="numcartevitale" placeholder="Numéro carte vitale"
+                           name="numerocartevitale" pattern="^[0-9]+$" maxlength="20"
+                           data-error="Invalid character" required>
+                </div>
+
+                <button class="pure-button pure-button-primary" name="submit" type="submit" value="11">Rechercher</button>
+            </form>
         </div>
     </section>
 </main>

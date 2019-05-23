@@ -98,40 +98,38 @@
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active" id="uploadTab">
 
-                                                    <form name="search" method="get">
+                                                    <form name="search"  action="{$view.urlbaseaddr}index.php/recherche/recherche" method="post">
                                                         <div class="form-group">
                                                             <label for="nom">Nom:</label>
                                                             <input type="text" required="required" class="form-control"
-                                                                   id="nom">
+                                                                   id="nom" name="username">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="prenom">Prénom:</label>
-                                                            <input type="text" class="form-control" id="prenom">
+                                                            <input type="text" class="form-control" id="prenom" name="prenom">
                                                         </div>
                                                         <button type="button" class="btn btn-secondary"
                                                                 data-dismiss="modal">
                                                             Fermer
                                                         </button>
-                                                        <button type="button" class="btn btn-primary">Rechercher
+                                                        <button name="submit" type="submit" value="10" class="btn btn-primary">Rechercher
                                                         </button>
                                                         <br>
-
-
                                                     </form>
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane" id="browseTab">
-                                                    <form name="searchNumSecu" method="get">
+                                                    <form name="searchNumSecu" action="{$view.urlbaseaddr}index.php/recherche/recherche" method="post">
                                                         <div class="form-group">
                                                             <label for="NumeroCarteVitale">Numéro de Sécurité
                                                                 Sociale:</label>
                                                             <input type="number" class="form-control"
-                                                                   id="NumeroCarteVitale">
+                                                                   id="NumeroCarteVitale" name="numerocartevitale">
                                                         </div>
                                                         <button type="button" class="btn btn-secondary"
                                                                 data-dismiss="modal">
                                                             Fermer
                                                         </button>
-                                                        <button type="submit" class="btn btn-primary">Rechercher
+                                                        <button name="submit" type="submit" value="11" class="btn btn-primary">Rechercher
                                                         </button>
                                                     </form>
                                                 </div>
