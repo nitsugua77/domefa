@@ -117,4 +117,93 @@ class RechercheService
             return false;
         }
     }
+
+    public function findAdresseMedecin($idMedecin)
+    {
+        try {
+            if (isset($idMedecin)) {
+                $results = $this->em->getRepository('Application\Models\Entity\Adresse')->findOneBy(array('idmedecin' => $idMedecin));
+                if(isset($results)){
+                    $array['adresse'] = $results->getNumeroresidence() . " " . $results->getNumeroresidence() . " " . $results->getRue();
+                    if (!empty($results->getNumeroappartement())) {
+                        $array['adresse'] = $results->getNumeroappartement() . " " . $array['adresse'];
+                    }
+                    if (!empty($results->getIdville())){
+                        $resultsville = $this->em->getRepository('Application\Models\Entity\Ville')->findOneBy(array('idville' => $results->getIdville()));
+                        $array['ville'] = $resultsville->getNom();
+                        $array['codepostal'] = $resultsville->getCodepostal();;
+                    }
+                    return $array;
+                }
+            }
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+    public function findComptesRendus($numerocartevitale)
+    {
+        try {
+            if (isset($numerocartevitale)) {
+                $resultsP = $this->objetsRepository->findOneBy(array('numerocartevitale' => $numerocartevitale));
+            }
+        } catch (\Exception $e) {
+            return false;
+        }
+        try {
+            if (isset($resultsP)) {
+                $results = $this->em->getRepository('Application\Models\Entity\Compterendu')->findBy(array('idpatient' => $resultsP->getIdpatient()), array('datecompterendu' => 'desc'));
+            }
+        } catch (\Exception $e) {
+            return false;
+        }
+        return $results;
+    }
+
+    public function findComptesRendusMedecin($rpps)
+    {
+        try {
+            if (isset($rpps)) {
+                $resultsP =$this->em->getRepository('Application\Models\Entity\Medecins')->findOneBy(array('rpps' => $rpps));
+            }
+        } catch (\Exception $e) {
+            return false;
+        }
+        try {
+            if (isset($resultsP)) {
+                $results = $this->em->getRepository('Application\Models\Entity\Compterendu')->findBy(array('idmedecin' => $resultsP->getIdMedecin()), array('datecompterendu' => 'desc'));
+            }
+        } catch (\Exception $e) {
+            return false;
+        }
+        return $results;
+    }
+
+    public function readMedecin($rpps)
+    {
+        try {
+            if (isset($rpps)) {
+                $results = $this->em->getRepository('Application\Models\Entity\Medecins')->findOneBy(array('rpps' => $rpps));
+
+            }
+        } catch (\Exception $e) {
+            return false;
+        }
+
+        return $results;
+    }
+
+    public function findNomPrenomPatient($idpatient)
+    {
+        try {
+            if (isset($idpatient)) {
+                $results = $this->em->getRepository('Application\Models\Entity\Users')->findOneBy(array('idpatient' => $idpatient));
+                if(isset($results)){
+                    return $results->getPrenom() . " " . $results->getNom() . " " . $results->getNumerocartevitale();
+                }
+            }
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
 }

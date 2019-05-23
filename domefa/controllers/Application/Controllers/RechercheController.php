@@ -3,6 +3,8 @@
 namespace Application\Controllers;
 
 
+use Application\Models\Entity\Compterendu;
+use Application\Models\Entity\Medecins;
 use \Ascmvc\AbstractApp;
 use \Ascmvc\Mvc\Controller;
 use Application\Services\RechercheService;
@@ -105,13 +107,64 @@ class RechercheController extends Controller
             if (is_object($results)) {
                 $results = $this->hydrateArray($results);
             }
+
+            $resultsCR = $this->getUsers()->findComptesRendus($_SESSION['REMOTE_USER']);
+
+            if (is_object($resultsCR)) {
+                $resultsCR = [$this->hydrateArray($resultsCR)];
+            } else {
+                for ($i = 0; $i < count($resultsCR); $i++) {
+                    $resultsCR[$i] = $this->hydrateArrayCR($resultsCR[$i]);
+                }
+            }
+
             $this->view['results'] = $results;
+
+            $this->view['resultsCR'] = $resultsCR;
 
             $this->view['username'] = $_SESSION['REMOTE_USER'];
 
             $this->viewObject->assign('view', $this->view);
 
             $this->viewObject->display('index_account_management.tpl');
+
+        }
+        else
+        {
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_warning.tpl');
+        }
+    }
+
+    public function account_medecinAction()
+    {
+        if (isset($_SESSION['REMOTE_USER']))
+        {
+            $results = $this->getUsers()->readMedecin($_SESSION['REMOTE_USER']);
+            if (is_object($results)) {
+                $results = $this->hydrateArrayMedecin($results);
+            }
+
+            $resultsCR = $this->getUsers()->findComptesRendusMedecin($_SESSION['REMOTE_USER']);
+
+            if (is_object($resultsCR)) {
+                $resultsCR = [$this->hydrateArray($resultsCR)];
+            } else {
+                for ($i = 0; $i < count($resultsCR); $i++) {
+                    $resultsCR[$i] = $this->hydrateArrayCR($resultsCR[$i]);
+                }
+            }
+
+            $this->view['results'] = $results;
+
+            $this->view['resultsCR'] = $resultsCR;
+
+            $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_account_management_medecin.tpl');
 
         }
         else
@@ -135,6 +188,31 @@ class RechercheController extends Controller
         $array['idmedecin'] = $object->getIdmedecin();
 
         $arrayAdresse = $this->getUsers()->findAdresse($object->getIdpatient());
+        $array['adresse'] = $arrayAdresse['adresse'];
+        $array['codepostal'] = $arrayAdresse['codepostal'];
+        $array['ville'] = $arrayAdresse['ville'];
+
+        return $array;
+    }
+
+    protected function hydrateArrayCR(Compterendu $object)
+    {
+        $array['datecompterendu'] = $object->getDatecompterendu()->format('Y-m-d');;
+        $array['description'] = $object->getDescription();
+        $array['medecin'] = $this->getUsers()->findNomPrenomMedecin($object->getIdmedecin());
+        $array['patient'] = $this->getUsers()->findNomPrenomPatient($object->getIdpatient());
+        return $array;
+    }
+
+    protected function hydrateArrayMedecin(Medecins $object)
+    {
+        $array['nom'] = $object->getNom();
+        $array['prenom'] = $object->getPrenom();
+        $array['specialisation'] = $object->getSpecialisation();
+        $array['email'] = $object->getAdressemail();
+        $array['rpps'] = $object->getRpps();
+        $array['telephone'] = $object->getTelephone();
+        $arrayAdresse = $this->getUsers()->findAdresseMedecin($object->getIdmedecin());
         $array['adresse'] = $arrayAdresse['adresse'];
         $array['codepostal'] = $arrayAdresse['codepostal'];
         $array['ville'] = $arrayAdresse['ville'];

@@ -50,42 +50,18 @@
 
                             <table>
                                 <tr>
-                                    <th>Date de l'ordonnance</th>
+                                    <th>Date du compte rendu</th>
                                     <th>Médecin</th>
-                                    <th>Ordonnance</th>
+                                    <th>Description</th>
 
                                 </tr>
-                                <tr>
-                                    <td>02/04/2019</td>
-                                    <td>Griffin</td>
-                                    <td><a href="client.png">ordonnance.pdf</a></td>
-
-                                </tr>
-                                <tr>
-                                    <td>02/04/2019</td>
-                                    <td>Griffin</td>
-                                    <td><a href="client.png">ordonnance.pdf</a></td>
-
-                                </tr>
-                                <tr>
-                                    <td>02/04/2019</td>
-                                    <td>Griffin</td>
-                                    <td><a href="client.png">ordonnance.pdf</a></td>
-
-                                </tr>
-
-                                <tr>
-                                    <td>02/04/2019</td>
-                                    <td>Griffin</td>
-                                    <td><a href="client.png">ordonnance.pdf</a></td>
-
-                                </tr>
-                                <tr>
-                                    <td>02/04/2019</td>
-                                    <td>Griffin</td>
-                                    <td><a href="client.png">ordonnance.pdf</a></td>
-
-                                </tr>
+                                {foreach from=$view.resultsCR item=compterendu}
+                                    <tr>
+                                        <td>{$compterendu.datecompterendu}</td>
+                                        <td>{$compterendu.medecin}</td>
+                                        <td>{$compterendu.description}</td>
+                                    </tr>
+                                {/foreach}
                             </table>
                         </div>
 

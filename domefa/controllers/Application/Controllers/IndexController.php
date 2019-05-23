@@ -45,6 +45,8 @@ class IndexController extends Controller
                 'Voyages_Park_Omega' => $baseConfig['URLBASEADDR'] . 'index.php/index/voyages_park_omega',
                 'Index_pro' => $baseConfig['URLBASEADDR'] . 'index.php/index/index_pro',
                 'Image' => $baseConfig['URLBASEADDR'] . 'img',
+                'HomePatient' => $baseConfig['URLBASEADDR'] . 'index.php/recherche/account_patient',
+                'HomePro' => $baseConfig['URLBASEADDR'] . 'index.php/recherche/account_medecin',
             ],
 
         ];
