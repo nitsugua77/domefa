@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DMF</title>
+    <meta name="description" content="Inscription">
+    <meta name="keywords" content="inscription">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="Stylesheet" href="header.css">
+</head>
+<body>
+<form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+        <h1 id="titre_modal_ins">Inscription</h1>
+
+
+    </div>
+
+    <div class="container">
+
+        <div>
+
+            <div class="form-group">
+                <label> Sexe :
+                    <input type="radio" name="gender" value="male" checked> Homme
+                    <input type="radio" name="gender" value="female"> Femme
+                </label><br>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email :</label><br>
+                <input type="email" class="form-control" id="email"
+                       placeholder="Entrez votre email"
+                       name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Mot de Passe :</label>
+                <input type="password" class="form-control" id="pwd"
+                       placeholder="Mot de passe"
+                       name="pwd" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Confirmation de votre de Passe :</label>
+                <input type="password" class="form-control" id="cpwd"
+                       placeholder="Confirmation"
+                       name="Confirm_Password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fn"> Prénom : </label>
+                <input type="text" class="form-control" id="fn" placeholder="Prénom"
+                       name="First_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ln">Nom : </label>
+                <input type="text" class="form-control" id="ln"
+                       placeholder="Nom de famille"
+                       name="Last_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user_input_autocomplete_address">Adresse :</label>
+                <input id="user_input_autocomplete_address" class="form-control"
+                       placeholder="Votre adresse...">
+            </div>
+
+            <div class="form-group">
+                <label for="locality">Ville :</label>
+                <input id="locality" name="locality" class="form-control" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="mb">Téléphone : </label>
+                <input type="text" class="form-control" id="mb"
+                       placeholder="Numéro de téléphone" name="Mobile"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="secunum">Numero Securite sociale :</label>
+                <input type="text" id="secunum" class="form-control"
+                       placeholder="Securite sociale"
+                       name="NumeroCarteVitale" required>
+            </div>
+
+            <div class="form-group">
+                <label for="signature">Carte Identité : </label>
+                <input type="file" id="signature" name="signature"
+                       accept="image/png, image/jpeg" multiple required>
+            </div>
+
+            <div class="form-group">
+                <label>Date de Naissance:
+                    <input type="date" name="DateOfBirth">
+                </label><br>
+            </div>
+
+            <div class="form-group">
+                <label> Groupe Sanguin:
+                    <input type="radio" name="GroupeSanguin" value="A+"> A+
+                    <input type="radio" name="GroupeSanguin" value="A-"> A-
+                    <input type="radio" name="GroupeSanguin" value="B+"> B+
+                    <input type="radio" name="GroupeSanguin" value="B-"> B-
+                    <input type="radio" name="GroupeSanguin" value="AB"> AB
+                    <input type="radio" name="GroupeSanguin" value="O+"> O+
+                    <input type="radio" name="GroupeSanguin" value="O-"> O-
+                </label><br>
+            </div>
+
+            <div class="form-group">
+
+                <input type="radio" name="auth" value="true" required> Je certifie que
+                les informations me sont propres et personnelles
+            </div>
+
+
+            <!-- Trigger the modal with the submit button -->
+            <button type="submit" class="btn btn-info btn-lg">Créer un compte
+            </button>
+
+
+        </div>
+    </div>
+</form>
+
+</body>
+</html>
