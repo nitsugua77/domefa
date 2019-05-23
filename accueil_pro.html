@@ -29,35 +29,29 @@ fonctionne
             <ul class="grouped">
 
                 <li>
-                    <button class="button_header" onclick="document.getElementById('id01').style.display='block'"
-                            style="width:auto;"><span> Se connecter </span></button>
-                    <div id="id01" class="modal">
-                        <form class="modal-content animate" action="/action_page.php">
-                            <div class="imgcontainer">
-                                <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                                      title="Close Modal">&times;</span>
-                                <img src="client.png" id="img_client" alt="Avatar" class="avatar">
+                    <button type="button"  class="button_header" data-toggle="modal" data-target="#exampleModal">
+                        Connexion
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Se connecter</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Se connecter</button>
+                                </div>
                             </div>
-
-                            <div class="container">
-                                <label for="NumeroCarteVitale"><b>RPPS</b></label>
-                                <input id="NumeroCarteVitale" type="text" placeholder="Securite sociale" name="NumeroCarteVitale" required>
-
-                                <label for="psw"><b>Mot de passe</b></label>
-                                <input id = "psw" type="password" placeholder="Mot de passe" name="psw" required>
-
-                                <button type="submit" class="btn-info">Se connecter
-                                </button>
-                                <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                                        class="cancelbtn">Cancel
-                                </button>
-                            </div>
-
-                            <div class="container" style="background-color:#f1f1f1">
-
-
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </li>
                 <li>
