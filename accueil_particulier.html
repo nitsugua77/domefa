@@ -18,7 +18,7 @@
 
 <!--banner-->
 
-
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container1">
         <a class="item" href="accueil_particulier.html"><img src="DMF.png" alt="Dossier Médical Facilité"
@@ -30,47 +30,60 @@
         <div class="grouped">
 
 
-            <button class="button_header" onclick="document.getElementById('id01').style.display='block'"
-                    style="width:auto;"><span> Se connecter </span></button>
-            <div id="id01" class="modal">
-                <form class="modal-content animate" action="/action_page.php">
-                    <div class="imgcontainer">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="button_header"
+                                    onclick="document.getElementById('id01').style.display='block'"
+                                    style="width:auto;"><span> Se connecter </span></button>
+                            <div id="id01" class="modal">
+                                <form class="modal-content animate" action="/action_page.php">
+                                    <div class="imgcontainer">
                                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
                                       title="Close Modal">&times;</span>
-                        <img src="client.png" id="img_client" alt="Avatar" class="avatar">
+                                        <img src="client.png" id="img_client" alt="Avatar" class="avatar">
+                                    </div>
+
+                                    <div class="container">
+                                        <label for="NumeroCarteVitale"><b>Numero Securite sociale</b></label>
+                                        <input id="NumeroCarteVitale" type="text" placeholder="Securite sociale"
+                                               name="NumeroCarteVitale" required>
+
+                                        <label for="psw"><b>Mot de passe</b></label>
+                                        <input id="psw" type="password" placeholder="Mot de passe" name="psw" required>
+
+                                        <button type="submit" class="btn-info">Se connecter
+                                        </button>
+                                        <button type="button"
+                                                onclick="document.getElementById('id01').style.display='none'"
+                                                class="cancelbtn">Cancel
+                                        </button>
+                                    </div>
+
+                                    <div class="container" style="background-color:#f1f1f1">
+
+
+                                    </div>
+                                </form>
+                            </div>
+
+                            <button class="button_header" style="width:auto"
+                                    onclick="window.location = 'inscriptionpatient.html'">
+                                <span> S'inscrire </span></button>
+
+
+                        </div>
                     </div>
 
-                    <div class="container">
-                        <label for="NumeroCarteVitale"><b>Numero Securite sociale</b></label>
-                        <input id="NumeroCarteVitale" type="text" placeholder="Securite sociale" name="NumeroCarteVitale" required>
-
-                        <label for="psw"><b>Mot de passe</b></label>
-                        <input id = "psw" type="password" placeholder="Mot de passe" name="psw" required>
-
-                        <button type="submit" class="btn-info">Se connecter
-                        </button>
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                                class="cancelbtn">Cancel
-                        </button>
-                    </div>
-
-                    <div class="container" style="background-color:#f1f1f1">
-
-
-                    </div>
-                </form>
+                </div>
             </div>
-
-            <button class="button_header" style="width:auto" onclick="window.location = 'inscriptionpatient.html'">
-                <span> S'inscrire </span></button>
-
-
         </div>
     </div>
 
-    </div>
 </nav>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
 <section id="banner" class="banner">
     <div class="bg-color">
         <div class="container">
