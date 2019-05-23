@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="Stylesheet" href="recherche.css">
+    <title>Ajout Compte rendu</title>
+    <link rel="Stylesheet" href="modifier.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDZ_QkVewPHf2Xq5FBeJh8tACHDK0QqVjw" type="text/javascript"></script>
 
 </head>
 
@@ -42,9 +43,9 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item dropdown">
-                        <a href="account_management_Patient.html" id="navbarDropdown" role="button"  aria-haspopup="true"
+                        <a href="account_management_medecin.html" id="navbarDropdown" role="button"  aria-haspopup="true"
                            aria-expanded="false" class="water">
-                            Mon compte &nbsp;
+                            Mon compte pro &nbsp;
                         </a>
                     </li>
 
@@ -68,64 +69,44 @@
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
                     <div class="card-body" >
-                        <h5 class="card-title text-center" style="font-size: 30px;"> Rechercher un médecin </h5>
+                        <h5 class="card-title text-center" style="font-size: 30px;"> Ajouter un compte rendu </h5>
 
 
                         <form class="form-signin">
 
                             <div class="form-label-group">
-                                <label label for="nom">Nom</label>
-                                <input type="text" id="nom" class="form-control" placeholder="Nom" required autofocus>
                                 <br>
-
-                            </div>
-
-                            <div class="form-label-group">
-                                <label label for="prenom">Prénom</label>
-                                <input type="text" id="prenom" class="form-control" placeholder="Prénom" required autofocus>
-                                <br>
-
-                            </div>
-
-                            <div class="form-label-group">
-                                <label>Code Postal</label>
-                                <input type="text" pattern="[0-9]{5}"  class="form-control" title="Code Postal" />
-                                <br>
-                            </div>
-
-                            <div class="form-label-group" style="display: none">
-                                <label>Ville</label>
-                                <input id="locality" name="locality"  class="form-control" disabled>
+                                <label>Numero Carte Vitale Patient </label>
+                                <input type="text" pattern="[0-9]{13}"  class="form-control" id="NumeroCartevitale" title="NumeroCartevitale" placeholder="Numéro carte vitale à 13 chiffres" autofocus />
                                 <br>
                             </div>
 
                             <div class="form-label-group">
-                                <label for="RPPS">RPPS</label>
-                                <input type="number" class="form-control" id="RPPS">
+                                <br>
+                                <label>Date du compte rendu </label>
+                                    <input type="date"   class="form-control" name="DateCompteRendu">
                                 <br>
                             </div>
 
                             <div class="form-label-group">
-                                <label for="spe">Spécialisation </label>
-                                <br>
-                                <input list="spe"  class="form-control" name="Specialisation">
-                                <datalist id="spe">
-                                    <option value="Cardiologue">Cardiologue</option>
-                                    <option value="Généraliste">Généraliste</option>
-                                    <option value="Pédiatre">Pédiatre</option>
-                                    <option value="Dentiste">Dentiste</option>
-                                    <option value="Neurologue">Neurologue</option>
-                                    <option value="Gynécologue">Gynécologue</option>
-                                    <option value="Pneumologue">Pneumologue</option>
-                                    <option value="Radiologue">Radiologue</option>
-                                    <option value="Rhumatologue">Rhumatologue</option>
-                                </datalist>
+                                <label for="Description">Description </label>
+                                <textarea id="Description" name="Description" class="form-control"></textarea>
                                 <br>
                             </div>
+
+
+
+
+                            <div class="form-label-group">
+                                <label for="DocumentAnnexe">Document(s) Annexe(s)</label>
+                                <input type="file" id="DocumentAnnexe"  name="DocumentAnnexe"  accept="image/png, image/jpeg, .txt, .pdf" multiple >
+                                <br>
+                            </div>
+
 
 
                             <br>
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"> Rechercher </button>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"> Ajouter </button>
                             <hr class="my-4">
 
                         </form>
@@ -138,5 +119,5 @@
         </div>
     </div>
 </div>
-
+<script type="text/javascript" src="google_api.js"></script>
 </html>
