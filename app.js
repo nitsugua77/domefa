@@ -32,7 +32,7 @@ Vue.component('image-container2', {
 
         }
     },
-    template: '<img src="2.jpg" alt="Dossier Médicale Facilité">\n'
+    template: '<img src="2.jpg" alt="Dossier Médical Facilité">\n'
 })
 
 
@@ -41,7 +41,7 @@ Vue.component('overlay-container2', {
         return {
         }
     },
-    template: '<div class="overlay"> DMF, votre Dossier Médicale Facilité !</div>'
+    template: '<div class="overlay"> DMF, votre Dossier Médical Facilité !</div>'
 })
 
 Vue.component('image-container3', {

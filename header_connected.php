@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>DMF</title>
     <meta name="author" content="Les Pingouins du Désert">
-    <meta name="description" content="Header Dossier Médicale Facilité">
-    <meta name="keywords" content="Header Dosssier Médicale Facile Santé ">
+    <meta name="description" content="Header Dossier Médical Facilité">
+    <meta name="keywords" content="Header Dosssier Médical Facile Santé ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="Stylesheet" href="header.css">
 
@@ -14,8 +14,8 @@
 <body>
 <div>
     <div class="container1">
-        <a class="item" href="index.html"><img src="logo2.png" alt="Dossier Médicale Facilité"></a>
-        <h1 class="title_header">Le Dossier Médicale Facilité</h1>
+        <a class="item" href="index.html"><img src="logo2.png" alt="Dossier Médical Facilité"></a>
+        <h1 class="title_header">Le Dossier Médical Facilité</h1>
         <div>
             <ul class="grouped">
 
