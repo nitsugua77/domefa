@@ -27,55 +27,45 @@
             <button class="button_espace_pro"> Vers Espace Pro</button>
         </a>
         <h1 class="title">Le Dossier Médical Facilité</h1>
-            <div class="grouped">
-
-                    <button type="button" class="button_header" data-toggle="modal" data-target="#myModal"
-                            onclick="document.getElementById('id02').style.display='block'"
-                        style="width:auto;"><span> Se connecter </span></button>
-                    <!-- Modal -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-
-                                    <h4 class="modal-title" id="myModalLabel">Se connecter</h4>
-
-                                    <button type="button" class="close" data-dismiss="modal"
-                                            aria-label="Close"><span
-                                            aria-hidden="true">&times;</span>
-
-                                    </button>
-                                </div>
-                                <div class="modal-body mx-3">
-                                    <div class="md-form mb-5">
-                                        <i class="fas fa-user prefix grey-text"></i>
-                                        <input type="text" id="form3" class="form-control validate">
-                                        <label data-error="wrong" data-success="right" for="form3">Numéro de Sécurité
-                                            Sociale</label>
-                                    </div>
-
-                                    <div class="md-form mb-4">
-                                        <i class="fas fa-envelope prefix grey-text"></i>
-                                        <input type="password" id="form2" class="form-control validate">
-                                        <label data-error="wrong" data-success="right" for="form2">Mot de passe</label>
-                                    </div>
-
-                                </div>
-                                <div class="modal-footer d-flex justify-content-center">
-                                    <button class="btn btn-indigo">Se connecter<i class="fas fa-paper-plane-o ml-1"></i>
-                                    </button>
-                                </div>
+        <div class="grouped">
 
 
-                            </div>
-                        </div>
+            <button class="button_header" onclick="document.getElementById('id01').style.display='block'"
+                    style="width:auto;"><span> Se connecter </span></button>
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                      title="Close Modal">&times;</span>
+                        <img src="client.png" id="img_client" alt="Avatar" class="avatar">
                     </div>
-                    <button class="button_header" style="width:auto" onclick="window.location = 'inscriptionpatient.html'"><span> S'inscrire </span></button>
+
+                    <div class="container">
+                        <label for="NumeroCarteVitale"><b>Numero Securite sociale</b></label>
+                        <input id="NumeroCarteVitale" type="text" placeholder="Securite sociale" name="NumeroCarteVitale" required>
+
+                        <label for="psw"><b>Mot de passe</b></label>
+                        <input id = "psw" type="password" placeholder="Mot de passe" name="psw" required>
+
+                        <button type="submit" class="btn-info">Se connecter
+                        </button>
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                                class="cancelbtn">Cancel
+                        </button>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
 
 
-
+                    </div>
+                </form>
             </div>
+
+            <button class="button_header" style="width:auto" onclick="window.location = 'inscriptionpatient.html'">
+                <span> S'inscrire </span></button>
+
+
+        </div>
     </div>
 
     </div>
