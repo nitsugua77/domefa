@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>DMF</title>
     <meta name="author" content="Les Pingouins du Désert">
-    <meta name="description" content="Dossier Médicale Facilité">
-    <meta name="keywords" content="Dosssier Médicale Facile Santé ">
+    <meta name="description" content="Dossier Médical Facilité">
+    <meta name="keywords" content="Dosssier Médical Facile Santé ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="Stylesheet" href="Information_client_pharmacien.css">
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Accueil</title>
+    <title>DMF</title>
     <meta name="description" content="accueil">
     <meta name="keywords" content="accueil">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
@@ -21,180 +21,76 @@
 
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container1">
-        <a class="item" href="accueil_particulier.html"><img src="DMF.png" alt="Dossier Médical Facilité" style="width:70px"></a>
+        <a class="item" href="accueil_particulier.html"><img src="DMF.png" alt="Dossier Médical Facilité"
+                                                             style="width:70px"></a>
         <a href="accueil_pro.html">
             <button class="button_espace_pro"> Vers Espace Pro</button>
         </a>
         <h1 class="title">Le Dossier Médical Facilité</h1>
-        <div>
+        <li>
             <ul class="grouped">
 
                 <li>
-                    <button class="button_header" onclick="document.getElementById('id01').style.display='block'"
-                            style="width:auto;"><span> Se connecter </span></button>
-                    <div id="id01" class="modal">
 
-                        <form class="modal-content animate" action="/action_page.php">
-                            <div class="imgcontainer">
-                                <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                                      title="Close Modal">&times;</span>
-                                <img src="client.png" id="img_client" alt="Avatar" class="avatar">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="button_header" data-toggle="modal" data-target="#myModal">
+                        Se connecter
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <h4 class="modal-title" id="myModalLabel">Se connecter</h4>
+
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span
+                                            aria-hidden="true">&times;</span>
+
+                                    </button>
+                                </div>
+                                <div class="modal-body mx-3">
+                                    <div class="md-form mb-5">
+                                        <i class="fas fa-user prefix grey-text"></i>
+                                        <input type="text" id="form3" class="form-control validate">
+                                        <label data-error="wrong" data-success="right" for="form3">Numéro de Sécurité
+                                            Sociale</label>
+                                    </div>
+
+                                    <div class="md-form mb-4">
+                                        <i class="fas fa-envelope prefix grey-text"></i>
+                                        <input type="password" id="form2" class="form-control validate">
+                                        <label data-error="wrong" data-success="right" for="form2">Mot de passe</label>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer d-flex justify-content-center">
+                                    <button class="btn btn-indigo">Se connecter<i class="fas fa-paper-plane-o ml-1"></i>
+                                    </button>
+                                </div>
+
+
                             </div>
-
-                            <div class="container">
-                                <label for="NumeroCarteVitale"><b>Numero Securite sociale</b></label>
-                                <input type="text" placeholder="Securite sociale" name="NumeroCarteVitale" required>
-
-                                <label for="psw"><b>Mot de passe</b></label>
-                                <input type="password" placeholder="Mot de passe" name="psw" required>
-
-                                <button type="submit">Se connecter</button>
-
-                            </div>
-
-                            <div class="container" style="background-color:#f1f1f1">
-                                <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                                        class="cancelbtn">Cancel
-                                </button>
-
-                            </div>
-                        </form>
+                        </div>
                     </div>
+
                 </li>
                 <li>
                     <button class="button_header" onclick="document.getElementById('id02').style.display='block'"
                             style="width:auto;"><span> S'inscrire </span></button>
                     <div id="id02" class="modal">
 
-                        <form class="modal-content animate" action="/action_page.php">
-                            <div class="imgcontainer">
-                                <h1 id="titre_modal_ins">Inscription</h1>
-                            </div>
-
-                            <div class="container">
-
-                                <form action="accueil_particulier.html">
-                                    <div>
-
-                                        <div class="form-group">
-                                            <label> Genre:
-                                                <input type="radio" name="gender" value="male" checked> Male
-                                                <input type="radio" name="gender" value="female"> Female
-                                            </label><br>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="email">Email:</label><br>
-                                            <input type="email" class="form-control" id="email"
-                                                   placeholder="Enter email"
-                                                   name="email" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="pwd">Mot de Passe:</label>
-                                            <input type="password" class="form-control" id="pwd"
-                                                   placeholder="Mot de passe"
-                                                   name="pwd" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="pwd">Mot de Passe:</label>
-                                            <input type="password" class="form-control" id="cpwd"
-                                                   placeholder="Mot de passe"
-                                                   name="Confirm_Password" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="fn"> Prénoms : </label>
-                                            <input type="text" class="form-control" id="fn" placeholder="Prénoms"
-                                                   name="First_name" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="ln">Nom : </label>
-                                            <input type="text" class="form-control" id="ln"
-                                                   placeholder="Nom de famille"
-                                                   name="Last_name" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Adresse</label>
-                                            <input id="user_input_autocomplete_address"
-                                                   placeholder="Votre adresse...">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Ville</label>
-                                            <input id="locality" name="locality" disabled>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="mb">Téléphone : </label>
-                                            <input type="text" class="form-control" id="mb"
-                                                   placeholder="Enter Mobile" name="Mobile"
-                                                   required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="NumeroCarteVitale">Numero Securite sociale</label>
-                                            <input type="text" placeholder="Securite sociale"
-                                                   name="NumeroCarteVitale" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="spe">Carte Identité : </label>
-                                            <input type="file" id="signature" name="signature"
-                                                   accept="image/png, image/jpeg" multiple required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Date de Naissance:
-                                                <input type="date" name="DateOfBirth">
-                                            </label><br>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label> Groupe Sanguin:
-                                                <input type="radio" name="GroupeSanguin" value="A+"> A+
-                                                <input type="radio" name="GroupeSanguin" value="A-"> A-
-                                                <input type="radio" name="GroupeSanguin" value="B+"> B+
-                                                <input type="radio" name="GroupeSanguin" value="B-"> B-
-                                                <input type="radio" name="GroupeSanguin" value="AB"> AB
-                                                <input type="radio" name="GroupeSanguin" value="O+"> O+
-                                                <input type="radio" name="GroupeSanguin" value="O-"> O-
-                                            </label><br>
-                                        </div>
-
-                                        <div class="form-group">
-
-                                            <input type="radio" name="auth" value="true" required> Je certifie que
-                                            les informations, me sont propres et personnelles
-                                        </div>
-
-
-                                        <!-- Trigger the modal with the submit button -->
-                                        <button type="submit" class="btn btn-info btn-lg" data-toggle="modal"
-                                                data-target="#myModal">Register
-                                        </button>
-                                        <div class="container" style="background-color:#f1f1f1">
-                                            <button type="button"
-                                                    onclick="document.getElementById('id02').style.display='none'"
-                                                    class="cancelbtn">Cancel
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-
-
-
-                        </form>
 
                     </div>
-
+                    </form>
 
                 </li>
+
+
             </ul>
-        </div>
+    </div>
 
     </div>
 </nav>
@@ -205,11 +101,13 @@
             <div class="row">
                 <div class="banner-info">
                     <div class="banner-logo text-center">
-                        <img src="DMFssbord.png"  width="200px" class="img-responsive">
+                        <img src="DMFssbord.png" width="200px" class="img-responsive">
                     </div>
                     <div class="banner-text text-center">
                         <h1 class="white">La Santé à votre portée</h1>
-                        <p>Le Dossier Médical Facilité est un carnet de santé numérique qui conserve précieusement vos informations de santé en ligne. Il vous permet de les partager avec les professionnels de santé de votre choix,
+                        <p>Le Dossier Médical Facilité est un carnet de santé numérique qui conserve précieusement vos
+                            informations de santé en ligne. Il vous permet de les partager avec les professionnels de
+                            santé de votre choix,
                             qui en ont besoin pour vous soigner. </p>
                         <a href="#service" class="btn btn-appoint">En savoir plus</a>
                     </div>
@@ -247,8 +145,10 @@
                     </div>
                     <div class="icon-info">
                         <h4>Sécurisé</h4>
-                        <p>Nous vous garantissons la traçabilité et la sécurité de vos informations personnelles et médicales.
-                            Vous êtes seul à pouvoir accéder à votre compte qui est protégé par des identifiants et un mot de passe. </p>
+                        <p>Nous vous garantissons la traçabilité et la sécurité de vos informations personnelles et
+                            médicales.
+                            Vous êtes seul à pouvoir accéder à votre compte qui est protégé par des identifiants et un
+                            mot de passe. </p>
                     </div>
                 </div>
 
@@ -262,7 +162,8 @@
                     </div>
                     <div class="icon-info">
                         <h4>Personnalisé</h4>
-                        <p>Votre compte DMF est totalement personnalisé. Retrouvez en quelques clics vos informations médicales. </p>
+                        <p>Votre compte DMF est totalement personnalisé. Retrouvez en quelques clics vos informations
+                            médicales. </p>
                     </div>
                 </div>
 
@@ -294,7 +195,8 @@
             </div>
             <div class="col-md-4 col-sm-5">
                 DMF s’engage pour le développement durable. En vous créant un compte DMF, vous luttez contre la
-                surconsommation de papier. Fini les carnets de santé, les ordonnances, seulement vous et votre smartphone !
+                surconsommation de papier. Fini les carnets de santé, les ordonnances, seulement vous et votre
+                smartphone !
                 <p class="text-right text-primary"><i>— L'équipe DMF</i></p>
             </div>
             <div class="col-md-2"></div>
@@ -309,7 +211,8 @@
                 <div class="section-title">
                     <h2 class="head-title lg-line">Un carnet de santé numérique...<br>Mais pas que!</h2>
                     <hr class="botm-line">
-                    <p class="sec-para">Le DMF n’est pas une simple interface médicale, c’est également un suivi bien-être.</p>
+                    <p class="sec-para">Le DMF n’est pas une simple interface médicale, c’est également un suivi
+                        bien-être.</p>
                 </div>
             </div>
             <div class="col-md-9 col-sm-8 col-xs-12">
@@ -327,7 +230,8 @@
                         </div>
                         <div class="more-features-box-text-description">
                             <h3>Consulter votre IMC</h3>
-                            <p>Vous pouvez calculer votre indice de masse corporelle pour suivre l'évolution de votre santé.</p>
+                            <p>Vous pouvez calculer votre indice de masse corporelle pour suivre l'évolution de votre
+                                santé.</p>
                         </div>
                     </div>
                 </div>
@@ -335,7 +239,6 @@
         </div>
     </div>
 </section>
-
 
 
 <footer id="footer">
@@ -347,7 +250,8 @@
                         <h4 class="white no-padding">A propos de nous...</h4>
                     </div>
                     <div class="info-sec">
-                        <p>L'équipe DMF s'engage à vous simplifier la vie au quotidien. La question de la santé est au coeur de nos préoccupations.</p>
+                        <p>L'équipe DMF s'engage à vous simplifier la vie au quotidien. La question de la santé est au
+                            coeur de nos préoccupations.</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 marb20">
