@@ -27,15 +27,11 @@
             <button class="button_espace_pro"> Vers Espace Pro</button>
         </a>
         <h1 class="title">Le Dossier Médical Facilité</h1>
-        <li>
-            <ul class="grouped">
+            <div class="grouped">
 
-                <li>
-
-                    <!-- Button trigger modal -->
-                    <button type="button" class="button_header" data-toggle="modal" data-target="#myModal">
-                        Se connecter
-                    </button>
+                    <button type="button" class="button_header" data-toggle="modal" data-target="#myModal"
+                            onclick="document.getElementById('id02').style.display='block'"
+                        style="width:auto;"><span> Se connecter </span></button>
                     <!-- Modal -->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                          aria-hidden="true">
@@ -75,21 +71,11 @@
                             </div>
                         </div>
                     </div>
-
-                </li>
-                <li>
-                    <button class="button_header" onclick="document.getElementById('id02').style.display='block'"
-                            style="width:auto;"><span> S'inscrire </span></button>
-                    <div id="id02" class="modal">
+                    <button class="button_header" style="width:auto" onclick="window.location = 'inscriptionpatient.html'"><span> S'inscrire </span></button>
 
 
-                    </div>
-                    </form>
 
-                </li>
-
-
-            </ul>
+            </div>
     </div>
 
     </div>
