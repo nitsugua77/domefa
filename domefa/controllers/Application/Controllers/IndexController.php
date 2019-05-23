@@ -31,7 +31,6 @@ class IndexController extends Controller
                 $baseConfig['URLBASEADDR'] . 'css/home.css',
                 $baseConfig['URLBASEADDR'] . 'css/header.css',
                 $baseConfig['URLBASEADDR'] . 'css/recherche.css',
-                $baseConfig['URLBASEADDR'] . 'css/account_management_patient.css',
             ],
             'js' =>
             [

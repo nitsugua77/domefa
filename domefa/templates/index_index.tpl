@@ -102,7 +102,7 @@
                                             <label for="mb">Téléphone : </label>
                                             <input type="text" class="form-control" id="mb"
                                                    placeholder="Numéro de téléphone"
-                                                   name="telephone" pattern="^[0-9]+$" maxlength="10" required>
+                                                   name="telephone" pattern="^[0-9]+$" maxlength="13" required>
                                         </div>
 
                                         <div class="form-group">

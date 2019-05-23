@@ -31,9 +31,11 @@ class CompterenduRepository extends EntityRepository
             $this->compterendu = $compterendu;
         }
 
-        $this->compterendu->setDatecompterendu($userArray['dateCompterendu']);
+        $this->compterendu->setDatecompterendu($userArray['datecompterendu']);
         $this->compterendu->setDescription($userArray['description']);
-        $this->compterendu->setDocumentannexe($userArray['documentannexe']);
+        if (isset($userArray['documentannexe'])){
+            $this->compterendu->setDocumentannexe($userArray['documentannexe']);
+        }
         $this->compterendu->setIdmedecin($userArray['idmedecin']);
         $this->compterendu->setIdpatient($userArray['idpatient']);
 

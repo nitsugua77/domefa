@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DMF - Gestion de compte</title>
-    {foreach from=$view.css item=script}
-        <link href="{$script}" rel="stylesheet">
-    {/foreach}
+    <link rel="Stylesheet" href="{$view.urlbaseaddr}css/account_management_patient.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>

@@ -206,4 +206,31 @@ class RechercheService
             return false;
         }
     }
+
+    public function saveCompteRendu($array)
+    {
+        try {
+            if (isset($array)) {
+                $this->em->getRepository('Application\Models\Entity\Compterendu')->save($array);
+                return true;
+            }
+            return false;
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+    public function saveOrdonnance($array)
+    {
+        try {
+            if (isset($array)) {
+                $this->em->getRepository('Application\Models\Entity\Ordonnance')->save($array);
+                return true;
+            }
+            return false;
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
 }

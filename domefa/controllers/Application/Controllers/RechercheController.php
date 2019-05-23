@@ -60,6 +60,58 @@ class RechercheController extends Controller
         }
     }
 
+    public function ajout_compte_renduAction()
+    {
+        if (isset($_SESSION['REMOTE_USER']))
+        {
+            if (!empty($_POST['numerocartevitale']) && !empty($_POST['datecompterendu']) && !empty($_POST['description']) && isset($_POST['submit'])
+                && $_POST['submit'] == 4){
+                $resultP = $this->getUsers()->readCV($_POST['numerocartevitale']);
+                $crArray['idpatient'] = $resultP->getIdpatient();
+                $crArray['datecompterendu'] = \DateTime::createFromFormat('Y-m-d', $_POST['datecompterendu']);
+                $crArray['description'] = (string) $_POST['description'];
+                if (!empty($_POST['docummentannexe'])) {
+                    $data = file_get_contents($_FILES['documentannexe']['tmp_name']);
+                    $crArray['documentannexe'] = $data;
+                }
+                $crArray['idmedecin'] = ($this->getUsers()->readMedecin($_SESSION['REMOTE_USER']))->getIdmedecin();
+
+                if($this->getUsers()->saveCompteRendu($crArray)){
+                    $this->view['message'] = "Ajout du compte rendu réussi";
+                }
+                else {
+                    $this->view['message'] = "Erreur lors de l'ajout";
+                }
+            }
+            if (!empty($_POST['numerocartevitale']) && !empty($_POST['nbrjours']) && !empty($_POST['nbrprises']) && !empty($_POST['nommedic']) && isset($_POST['submit'])
+                && $_POST['submit'] == 5){
+                $resultP = $this->getUsers()->readCV($_POST['numerocartevitale']);
+                $orArray['idpatient'] =(integer) $resultP->getIdpatient();
+                $orArray['nbrjours'] = (integer) $_POST['nbrjours'];
+                $orArray['nbrprises'] = (integer) $_POST['nbrprises'];
+                $orArray['nommedic'] = (string) $_POST['nommedic'];
+
+                if($this->getUsers()->saveOrdonnance($orArray)){
+                    $this->view['message2'] = "Ajout de l'ordonnance réussi";
+                }
+                else {
+                    $this->view['message2'] = "Erreur lors de l'ajout";
+                }
+            }
+            $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_ajout_compte_rendu.tpl');
+        }
+        else
+        {
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_warning.tpl');
+        }
+    }
+
     public function rechercheAction()
     {
         if (isset($_SESSION['REMOTE_USER']))
@@ -174,6 +226,7 @@ class RechercheController extends Controller
             $this->viewObject->display('index_warning.tpl');
         }
     }
+
 
     protected function hydrateArray(Users $object)
     {
