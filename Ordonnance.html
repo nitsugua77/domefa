@@ -1,59 +1,118 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DMF - Votre ordonnance</title>
-    <meta name="author" content="Les Pingouins du Désert">
-    <meta name="description" content="Ordonnance patient">
-    <meta name="keywords" content="Dossier Medical Facilite patient ordonnance">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compte rendu</title>
+    <link rel="Stylesheet" href="fiche_patient.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--  <link rel="Stylesheet" href="header-footer.css">
-      <link rel="Stylesheet" href="AccountManagement.css">
-      <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Hind:700" rel="stylesheet">-->
+
 </head>
-<body>
-<header>
-    <h1>Dr Paulette BOUVETTE</h1>
-    <ul>
-        <li>Gynécologue</li>
-        <li>50 avenue de la République, <br>94800 Villejuif</li>
-        <li>0123456789</li>
-    </ul>
-</header>
-<main>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <img style="width: 70px" src="DMF.png" alt="logo"/>
+        <a class="navbar-brand" href="#" style="font-size: 30px"> &nbsp; Le Dossier Médical Facilité</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <header>
-            <br>
-            <h1>Mr Paul-Antoine INGHELBHRECHT</h1>
-            <ul>
-                <li>30 avenue de la République, <br>94800 Villejuif</li>
-                <li>Téléphone : 0123456789</li>
-            </ul>
-        </header>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="grouped">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a href="account_management_medecin.html"  role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false" class="water">
+                            Mon Compte &nbsp;
+                        </a>
 
-        <section>
-            <h2>Ordonnance</h2>
-            <ol>
-                <li>Doliprane 200 mp cps voie orale 2 cps/j pendant 1 semaine</li>
-                <li>Dolpranev2 500 mp cps voie orale 3 cps/j pendant 2 semaines</li>
-            </ol>
+                        <a href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false" class="water">
+                            Modifier &nbsp;
+                        </a>
 
-        </section>
 
-        <section>
-            <br><br><p>Dr BOUVETTE <br>Signature</p>
-        </section>
+                        <a href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false" class="water">
+                            Déconnexion
+                        </a>
 
-</main>
 
-<footer>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<body><div class="container text-center">
+    <h1 class="mt-5 text-white font-weight-light"></h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-9 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center" style="font-size: 30px;"> Ordonnance </h5>
 
-</footer>
+                        <div class="card-body">
 
+
+
+                            <table class="table table-hover" >
+                                <tr>
+                                    <th>Informations</th>
+                                    <th>Prescriptions</th>
+                                </tr>
+
+                                <tr>
+                                    <td>Nom du Patient</td>
+                                    <td> Ma Long </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Nom du Médicament</td>
+                                    <td>Doliprane</td>
+                                </tr>
+                                <tr>
+                                    <td>Nombre de prises par jour</td>
+                                    <td>3</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Nombre de jours de traitement</td>
+                                    <td>7</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Prescrit par</td>
+                                    <td>Dr Fan Zhendong</td>
+                                </tr>
+
+
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
