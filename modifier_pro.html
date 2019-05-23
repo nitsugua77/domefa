@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Compte rendu</title>
-    <link rel="Stylesheet" href="fiche_patient.css">
+    <title>Modifier ses informations</title>
+    <link rel="Stylesheet" href="modifier.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
@@ -25,8 +25,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDZ_QkVewPHf2Xq5FBeJh8tACHDK0QqVjw" type="text/javascript"></script>
 
 </head>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <img style="width: 70px" src="DMF.png" alt="logo"/>
@@ -39,76 +41,74 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="grouped">
                 <ul class="navbar-nav ml-auto">
+
                     <li class="nav-item dropdown">
-                        <a href="account_management_medecin.html"  role="button" data-toggle="dropdown" aria-haspopup="true"
+                        <a href="account_management_medecin.html" id="navbarDropdown" role="button"  aria-haspopup="true"
                            aria-expanded="false" class="water">
-                            Mon Compte &nbsp;
+                            Mon compte pro &nbsp;
                         </a>
+                    </li>
 
-                        <a href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false" class="water">
-                            Modifier &nbsp;
-                        </a>
-
-
-                        <a href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    <li class="nav-item dropdown">
+                        <a href="log_out.html" id="navbarDropdown2" role="button"  aria-haspopup="true"
                            aria-expanded="false" class="water">
                             Déconnexion
                         </a>
-
-
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 </nav>
-<body><div class="container text-center">
-    <h1 class="mt-5 text-white font-weight-light">&nbsp; &nbsp; Paul-Antoine INGHELBHRECHT</h1>
+
+
+
+<div class="container text-center">
     <div class="container">
         <div class="row">
-            <div class="col-sm-9 col-md-7 col-lg-9 mx-auto">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
-                    <div class="card-body">
-                        <h5 class="card-title text-center" style="font-size: 30px;"> Compte Rendu </h5>
-
-                        <div class="card-body">
+                    <div class="card-body" >
+                        <h5 class="card-title text-center" style="font-size: 30px;"> Modifier ses informations </h5>
 
 
+                        <form class="form-signin">
 
-                            <table class="table table-hover" >
-                                <tr>
-                                    <th>Informations</th>
-                                    <th>Compte rendu</th>
-                                </tr>
-                                <tr>
-                                    <td>Numero Carte Vitale</td>
-                                    <td>299556564456</td>
+                            <div class="form-label-group">
+                                <label label for="nom">Téléphone</label>
+                                <input type="text" id="nom" class="form-control" placeholder="Téléphone">
+                                <br>
 
+                            </div>
 
-                                </tr>
-                                <tr>
-                                    <td>Date du compte rendu</td>
-                                    <td>29/06/1999</td>
+                            <div class="form-label-group">
+                                <label>Adresse</label>
+                                <input id="user_input_autocomplete_address"  class="form-control" placeholder="Votre adresse">
+                                <br>
 
-                                </tr>
-                                <tr>
-                                    <td>Description</td>
-                                    <td>"Que dit-on au Dieu de la Mort ? » – Pas aujourd’hui.</td>
+                            </div>
 
 
-                                </tr>
+                            <div class="form-label-group" style="display: none">
+                                <label>Ville</label>
+                                <input id="locality" name="locality"  class="form-control" disabled>
+                                <br>
+                            </div>
 
-                                <tr>
-                                    <td>Document annexe</td>
-                                    <td></td>
-                                </tr>
 
-                            </table>
+                            <br>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"> Modifier </button>
+                            <hr class="my-4">
+
+                        </form>
+
+
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</body>
+<script type="text/javascript" src="google_api.js"></script>
 </html>

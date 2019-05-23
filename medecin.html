@@ -1,123 +1,90 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DMF - Votre professionnel de la santé</title>
-    <meta name="author" content="Les Pingouins du Désert">
-    <meta name="description" content="Information practicien-docteur, professionnel de la santé">
-    <meta name="keywords" content="Dossier Medical Facilite Medecin Information Sante">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="Stylesheet" href="account_management_patient.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--  <link rel="Stylesheet" href="header-footer.css">
-      <link rel="Stylesheet" href="AccountManagement.css">
-      <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Hind:700" rel="stylesheet">-->
+
 </head>
-<body>
-<header>
 
-</header>
-<main>
-    <section>
-        <h1 style="font-size:2em">Dr Paul-Antoine INGHELBHRECHT</h1>
-        <div class="card" style="width:400px">
-            <img class="card-img-top" src="doctor1.png" alt="Doctor Image" style="width:100px">
-            <div class="card-body">
-                <h2 class="card-title" style="font-size:1.5em">Gynécologue</h2>
-                <ul class="card-text">
-                    <li>RPPS : 1111111</li>
-                    <li>Adresse : 30 avenue de la République, <br>94800 Villejuif</li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <img style="width: 70px" src="DMF.png" alt="logo"/>
+        <a class="navbar-brand" href="#" style="font-size: 30px"> &nbsp; Le Dossier Médical Facilité</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <li>Téléphone : 0123456789</li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="grouped">
+                <ul class="navbar-nav ml-auto">
+                    <li>
+
+                        <a href="account_management_Patient.html" id="navbarDropdown1" role="button" aria-haspopup="true"
+                           aria-expanded="false" class="water">
+                            Mon compte &nbsp;
+                        </a>
+                    </li>
+                    <li>
+                        <a href="log_out.html" id="navbarDropdown2" role="button"  aria-haspopup="true"
+                           aria-expanded="false" class="water">
+                            Déconnexion
+                        </a>
+                    </li>
+
+
+                    </li>
                 </ul>
-
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                    Rechercher un patient
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                        aria-hidden="true">&times;</span>
-
-                                </button>
-                                <h4 class="modal-title" id="myModalLabel">Recheche de patients par ...</h4>
-
-                            </div>
-                            <div class="modal-body">
-                                <div role="tabpanel">
-                                    <!-- Nav tabs -->
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li role="presentation" class="active"><a href="#uploadTab"
-                                                                                  aria-controls="uploadTab" role="tab"
-                                                                                  data-toggle="tab">Nom et Prénom</a>
-
-                                        </li>
-                                        <li role="presentation"><a href="#browseTab" aria-controls="browseTab"
-                                                                   role="tab" data-toggle="tab">Numéro de Sécurité
-                                            Sociale</a>
-
-                                        </li>
-                                    </ul>
-                                    <!-- Tab panes -->
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="uploadTab">
-
-                                            <form name="search" method="get">
-                                                <div class="form-group">
-                                                    <label for="nom">Nom:</label>
-                                                    <input type="text" required="required" class="form-control"
-                                                           id="nom">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="prenom">Prénom:</label>
-                                                    <input type="text" class="form-control" id="prenom">
-                                                </div>
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                                    Fermer
-                                                </button>
-                                                <button type="button" class="btn btn-primary">Rechercher</button>
-                                                <br>
-
-
-                                            </form>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" id="browseTab">
-                                            <form name="searchNumSecu" method="get">
-                                                <div class="form-group">
-                                                    <label for="NumeroCarteVitale">Numéro de Sécurité Sociale:</label>
-                                                    <input type="number" class="form-control" id="NumeroCarteVitale">
-                                                </div>
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                                    Fermer
-                                                </button>
-                                                <button type="submit" class="btn btn-primary">Rechercher</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
+    </div>
+</nav>
 
-    </section>
-</main>
 
-<footer>
 
-</footer>
-</body>
+<div class="container text-center">
+    <h1 class="mt-5 text-white font-weight-light">Dr Augustin BOUVET </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center" style="font-size: 25px;"> Gynécologue </h5><img src="medecin.png">
+
+
+                        <ul class="card-text" style="list-style: none;">
+                            <li>RPPS : 1111111</li>
+                            <li>Adresse : 30 avenue de la République, <br>94800 Villejuif</li>
+
+                            <li>Téléphone : 0123456789</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </html>
