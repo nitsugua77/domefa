@@ -25,42 +25,49 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDZ_QkVewPHf2Xq5FBeJh8tACHDK0QqVjw" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDZ_QkVewPHf2Xq5FBeJh8tACHDK0QqVjw"
+            type="text/javascript"></script>
 
 </head>
+<body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <img style="width: 70px" src="DMF.png" alt="logo"/>
-        <a class="navbar-brand" href="#" style="font-size: 30px"> &nbsp; Le Dossier Médical Facilité</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<header>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="grouped">
-                <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item dropdown">
-                        <a href="account_management_medecin.html" id="navbarDropdown" role="button"  aria-haspopup="true"
-                           aria-expanded="false" class="water">
-                            Mon compte pro &nbsp;
-                        </a>
-                    </li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <img style="width: 70px" src="DMF.png" alt="logo"/>
+            <a class="navbar-brand" href="#" style="font-size: 30px"> &nbsp; Le Dossier Médical Facilité</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <li class="nav-item dropdown">
-                        <a href="log_out.html" id="navbarDropdown2" role="button"  aria-haspopup="true"
-                           aria-expanded="false" class="water">
-                            Déconnexion
-                        </a>
-                    </li>
-                </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="grouped">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item dropdown">
+                            <a href="account_management_medecin.html" id="navbarDropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false" class="water">
+                                Mon compte pro &nbsp;
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="log_out.html" id="navbarDropdown2" role="button" aria-haspopup="true"
+                               aria-expanded="false" class="water">
+                                Déconnexion
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
+</header>
 
 
 <div class="container text-center">
@@ -68,7 +75,7 @@
         <div class="row">
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
-                    <div class="card-body" >
+                    <div class="card-body">
                         <h5 class="card-title text-center" style="font-size: 30px;"> Ajouter un compte rendu </h5>
 
 
@@ -77,14 +84,16 @@
                             <div class="form-label-group">
                                 <br>
                                 <label>Numero Carte Vitale Patient </label>
-                                <input type="text" pattern="[0-9]{13}"  class="form-control" id="NumeroCartevitale" title="NumeroCartevitale" placeholder="Numéro carte vitale à 13 chiffres" autofocus />
+                                <input type="text" pattern="[0-9]{13}" class="form-control" id="NumeroCartevitale"
+                                       title="NumeroCartevitale" placeholder="Numéro carte vitale à 13 chiffres"
+                                       autofocus/>
                                 <br>
                             </div>
 
                             <div class="form-label-group">
                                 <br>
                                 <label>Date du compte rendu </label>
-                                    <input type="date"   class="form-control" name="DateCompteRendu">
+                                <input type="date" class="form-control" name="DateCompteRendu">
                                 <br>
                             </div>
 
@@ -95,22 +104,20 @@
                             </div>
 
 
-
-
                             <div class="form-label-group">
                                 <label for="DocumentAnnexe">Document(s) Annexe(s)</label>
-                                <input type="file" id="DocumentAnnexe"  name="DocumentAnnexe"  accept="image/png, image/jpeg, .txt, .pdf" multiple >
+                                <input type="file" id="DocumentAnnexe" name="DocumentAnnexe"
+                                       accept="image/png, image/jpeg, .txt, .pdf" multiple>
                                 <br>
                             </div>
 
 
-
                             <br>
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"> Ajouter </button>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"> Ajouter
+                            </button>
                             <hr class="my-4">
 
                         </form>
-
 
 
                     </div>
@@ -126,7 +133,7 @@
         <div class="row">
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
-                    <div class="card-body" >
+                    <div class="card-body">
                         <h5 class="card-title text-center" style="font-size: 30px;"> Ajouter une Ordonnance</h5>
 
 
@@ -135,33 +142,35 @@
                             <div class="form-label-group">
                                 <br>
                                 <label>Nombre de jours de traitement</label>
-                                <input type="text" class="form-control" id="NombreJourTraitement" title="NombreJourTraitement" placeholder="Nombre de jours de traitement" autofocus />
+                                <input type="text" class="form-control" id="NombreJourTraitement"
+                                       title="NombreJourTraitement" placeholder="Nombre de jours de traitement"
+                                       autofocus/>
                                 <br>
                             </div>
 
                             <div class="form-label-group">
 
                                 <label>Nombre de prises par jour </label>
-                                <input type="text" class="form-control" id="NombreParJour" title="NombreParJour" placeholder="Nombre de prises par jour" />
+                                <input type="text" class="form-control" id="NombreParJour" title="NombreParJour"
+                                       placeholder="Nombre de prises par jour"/>
                                 <br>
                             </div>
 
                             <div class="form-label-group">
 
                                 <label>Nom du Médicament</label>
-                                <input type="text" class="form-control" id="NomMedicament" title="NomMedicament" placeholder="Nom du Médicament" />
+                                <input type="text" class="form-control" id="NomMedicament" title="NomMedicament"
+                                       placeholder="Nom du Médicament"/>
                                 <br>
                             </div>
 
 
-
-
                             <br>
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"> Ajouter </button>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"> Ajouter
+                            </button>
                             <hr class="my-4">
 
                         </form>
-
 
 
                     </div>
@@ -170,5 +179,8 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript" src="google_api.js"></script>
+
+</body>
 </html>
