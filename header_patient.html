@@ -1,34 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="Stylesheet" href="account_management_patient.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-</head>
-<body>
+<link rel="Stylesheet" href="account_management_patient.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <img style="width: 70px" src="DMF.png" alt="logo"/>
+        <a class="item" href="accueil_particulier.html"><img src="DMF.png" alt="Dossier Médical Facilité"
+                                                             style="width:70px"></a>
         <a class="navbar-brand" href="accueil_particulier.html" style="font-size: 25px"> &nbsp; Le Dossier Médical
             Facilité &nbsp; &nbsp; </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -71,17 +58,13 @@
                 <li>
 
 
-                    <button type="button" class="btn btn-default btn-sm"
-                            style=" background: rgba(255,255,255,0);  border: none;">
-
-                        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Modifier"
-                                data-content="Veuillez envoyer un mail à dossiermedicalfacilite@gmail.com"
-                                aria-haspopup="true" aria-expanded="false" class="water">Modifier
-                        </button>
-                        <!--   <a href="modifier_patient.html" id="navbarDropdown3" role="button"  aria-haspopup="true" aria-expanded="false" class="water">
-                                  Modifier &nbsp;
-                              </a>-->
-                    </button>
+                    <button type="button" class="btn btn-default btn-sm water"
+                            style=" background: rgba(255,255,255,0);"><a
+                            tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="bottom"
+                            title="Modifier"
+                            data-content="Veuillez envoyer un mail à dmf@gmail.com pour toute modification."
+                            aria-haspopup="true" aria-haspopup="true" aria-expanded="false"
+                            class="water">Modifier</a></button>
                 </li>
                 <li>
                     <button type="button" class="btn btn-default btn-sm" style=" background: rgba(255,255,255,0);"><a
@@ -95,12 +78,11 @@
         </div>
     </div>
 </nav>
-<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom"
-        data-content="Vivamus
-sagittis lacus vel augue laoreet rutrum faucibus.">
-    Popover on bottom
-</button>
 
-</body>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
 
 </html>
