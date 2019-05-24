@@ -37,11 +37,11 @@
                                 <li>Groupe sanguin : {$view.results.groupesanguin}</li>
                                 <li>Date de naissance : {$view.results.datenaissance}</li>
                             </ul>
-                            <a href="#" class="btn btn-primary" style="background-color: #EC930A; border: #EC930A">Vos rendez-vous </a>
+                            <a href="{$view.urlbaseaddr}index.php/recherche/calendrier" class="btn btn-primary" style="background-color: #EC930A; border: #EC930A">Vos rendez-vous </a>
 
 
                             <h3>Mon Médecin traitant </h3>
-                            <img src="{$view.links.Image}/medecin.png"> <a href="fiche_medecin.html"> Dr {$view.results.medecintraitant}</a>
+                            <img src="{$view.links.Image}/medecin.png"> <a href="#"> Dr {$view.results.medecintraitant}</a>
 
                             <h3> Mes comptes rendus </h3>
 

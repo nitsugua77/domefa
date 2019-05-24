@@ -43,9 +43,6 @@ class OrdonnanceRepository extends EntityRepository
             $this->ordonnance->setIdvaccin($userArray['idvaccin']);
         }
         $this->ordonnance->setIdpatient($userArray['idpatient']);
-        echo $userArray['idpatient'];
-        echo $userArray['nbrjours'];
-        echo $userArray['nommedic'];
 
         return $this->ordonnance;
     }

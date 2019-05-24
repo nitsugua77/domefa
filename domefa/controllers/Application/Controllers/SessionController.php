@@ -38,20 +38,36 @@ class SessionController extends Controller
         {
             $this->view['username'] = $_SESSION['REMOTE_USER'];
 
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
+
             $this->viewObject->assign('view', $this->view);
 
-            $this->viewObject->display('index_logged.tpl');
+            $this->viewObject->display('index_account_management_medecin.tpl');
         }
         else
         {
             if (isset($GLOBALS['errormessage']))
             {
                 $this->view['errormessage'] = $GLOBALS['errormessage'];
+
+                if ($GLOBALS['errormessage'] == 1 || $GLOBALS['errormessage'] == 3) {
+                    $this->viewObject->assign('view', $this->view);
+
+                    $this->viewObject->display('index_mdp_incorrect.tpl');
+                }
+                else if ($GLOBALS['errormessage'] == 2) {
+                    $this->viewObject->assign('view', $this->view);
+
+                    $this->viewObject->display('logout.tpl');
+                }
+            }
+            else {
+                $this->viewObject->assign('view', $this->view);
+
+                $this->viewObject->display('index_index.tpl');
             }
 
-            $this->viewObject->assign('view', $this->view);
 
-            $this->viewObject->display('logout.tpl');
         }
     }
 

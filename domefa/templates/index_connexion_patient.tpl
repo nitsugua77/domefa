@@ -26,14 +26,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDZ_QkVewPHf2Xq5FBeJh8tACHDK0QqVjw" type="text/javascript"></script>
-
+    <link rel="Stylesheet" href="{$view.urlbaseaddr}css/header.css">
 </head>
+<header>
 
-{include file='navbar_disconnected_patient.tpl'}
+    <nav class="container1 navbar navbar-custom navbar-fixed-top navbar-expand-lg navbar-light bg-light" role="navigation">
+
+        <a class="item" href="{$view.links.Home}"><img src="{$view.links.Image}/DMF.png" style="width:70px"
+                                                     alt="Dossier Médicale Facilité"></a>
+
+        <a href="{$view.links.Index_pro}">
+            <button class="button_espace_pro"> Vers Espace Pro</button>
+        </a>
+        <h1 class="title">Le Dossier Médical Facilité</h1>
+        <div class="grouped">
+
+            <button class="button_header" style="width:auto"><a href="{$view.urlbaseaddr}index.php/index/connexionPatient"
+                                                                style="text-decoration: none; color: white;"> Se
+                    connecter </a></button>
+            <button class="button_header" style="width:auto"><a href="{$view.urlbaseaddr}index.php/index/inscriptionPatient"
+                                                                style="text-decoration: none; color: white;">
+                    S'inscrire </a></button>
+        </div>
+
+    </nav>
+</header>
 
 <body>
 
 <div class="container text-center">
+    <br><br><br>
     <div class="container">
         <div class="row">
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">

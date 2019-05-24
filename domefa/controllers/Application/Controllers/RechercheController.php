@@ -48,6 +48,8 @@ class RechercheController extends Controller
 
             $this->view['username'] = $_SESSION['REMOTE_USER'];
 
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
+
             $this->viewObject->assign('view', $this->view);
 
             $this->viewObject->display('index_recherche_patient.tpl');
@@ -67,6 +69,8 @@ class RechercheController extends Controller
 
             $this->view['username'] = $_SESSION['REMOTE_USER'];
 
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
+
             $this->viewObject->assign('view', $this->view);
 
             $this->viewObject->display('index_recherche_medecin.tpl');
@@ -84,6 +88,8 @@ class RechercheController extends Controller
         if (isset($_SESSION['REMOTE_USER']))
         {
             $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
 
             $this->viewObject->assign('view', $this->view);
 
@@ -136,6 +142,8 @@ class RechercheController extends Controller
                 }
             }
             $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
 
             $this->viewObject->assign('view', $this->view);
 
@@ -199,6 +207,8 @@ class RechercheController extends Controller
 
             $this->view['username'] = $_SESSION['REMOTE_USER'];
 
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
+
             $this->viewObject->assign('view', $this->view);
 
             $this->viewObject->display('index_resultats.tpl');
@@ -235,6 +245,8 @@ class RechercheController extends Controller
             $this->view['resultsCR'] = $resultsCR;
 
             $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
 
             $this->viewObject->assign('view', $this->view);
 
@@ -273,6 +285,8 @@ class RechercheController extends Controller
             $this->view['resultsCR'] = $resultsCR;
 
             $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
 
             $this->viewObject->assign('view', $this->view);
 
@@ -332,5 +346,24 @@ class RechercheController extends Controller
         $array['ville'] = $arrayAdresse['ville'];
 
         return $array;
+    }
+
+    public function calendrierAction()
+    {
+        if (isset($_SESSION['REMOTE_USER']))
+        {
+            $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_calendrier.tpl');
+
+        }
+        else
+        {
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_warning.tpl');
+        }
     }
 }

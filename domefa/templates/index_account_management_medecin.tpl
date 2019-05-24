@@ -26,9 +26,85 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>-->
+
 </head>
 
-{include file='navbar.tpl'}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="item" href="{$view.links.HomePro}"><img src="{$view.links.Image}/DMF.png" alt="Dossier Médical Facilité"
+                                                              style="width:70px"></a>
+        <a class="navbar-brand" href="{$view.links.HomePro}" style="font-size: 25px"> &nbsp; Le Dossier Médical
+            Facilité &nbsp; &nbsp; </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <button type="button" class="btn btn-default btn-sm"
+                            style=" background: rgba(255,255,255,0); border: none;">
+                        <a href="{$view.urlbaseaddr}index.php/recherche/indexMedecin" id="navbarDropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false" class="water">
+                            Rechercher un médecin &nbsp;
+                        </a>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-default btn-sm"
+                            style=" background: rgba(255,255,255,0);  border: none;">
+                        <a href="{$view.urlbaseaddr}index.php/recherche/imc" id="navbarDropdown2" aria-haspopup="true" aria-expanded="false"
+                           class="water">
+                            Calculer son IMC &nbsp;
+                        </a>
+                    </button>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <button type="button" class="btn btn-default btn-sm"
+                            style=" background: rgba(255,255,255,0);  border: none;">
+                        <a href="{$view.links.HomePro}" id="navbarDropdown5" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false" class="water">
+                            Mon compte
+                        </a>
+                    </button>
+                </li>
+
+                <li>
+
+
+                    <button type="button" class="btn btn-default btn-sm water"
+                            style=" background: rgba(255,255,255,0); border: none;"><a
+                                tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="bottom"
+                                title="Modifier"
+                                data-content="Veuillez envoyer un mail à dmf@gmail.com pour toute modification."
+                                aria-haspopup="true" aria-expanded="false"
+                                class="water">Modifier</a></button>
+                </li>
+                <li>
+                    <!--<button type="button" ><a
+                                href="log_out.html" id="navbarDropdown4" aria-haspopup="true" aria-expanded="false"
+                                class="water"> Déconnexion</a></button>-->
+                    <form action="{$view.urlbaseaddr}index.php/session/index" method="post">
+                        <button class="btn btn-default " style=" background: rgba(255,255,255,0); border: none; font-size: 18px;" name="logout" type="submit" value="2">Déconnexion</button>
+                    </form>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
 
 <div class="container text-center">
     <h1 class="mt-5 text-white font-weight-light">Bienvenue Dr {$view.results.prenom} {$view.results.nom} </h1>
@@ -52,11 +128,19 @@
 
                             <button class="btn btn-primary" style="width:170px"> Outils</button>
                             <div class="dropdown-content">
-                                <a href="{$view.urlbaseaddr}index.php/recherche/ajout_compte_rendu?user={$smarty.get.user}">Ajouter un compte rendu</a>
-                                <a href="{$view.urlbaseaddr}index.php/recherche/ajout_compte_rendu?user={$smarty.get.user}#ancre">Ajouter une ordonnance</a>
+                                <a href="{$view.urlbaseaddr}index.php/recherche/ajout_compte_rendu">Ajouter un compte rendu</a>
+                                <a href="{$view.urlbaseaddr}index.php/recherche/ajout_compte_rendu#ancre">Ajouter une ordonnance</a>
 
                             </div>
                         </div>
+
+
+
+
+
+
+
+
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                             Rechercher un patient
@@ -139,6 +223,104 @@
                                 </div>
                             </div>
                         </div>
+
+
+
+                        <!-- Button trigger modal
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            Rechercher un patient
+                        </button>
+
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+
+                                        <h4 class="modal-title" id="myModalLabel">Recherche de patients par ...</h4>
+
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close"><span
+                                                    aria-hidden="true">&times;</span>
+
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div role="tabbable">
+
+                                            <!--Nav tabs
+                                            <nav>
+                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                    <a class="nav-item nav-link active" id="nav-nom-tab"
+                                                       data-toggle="tab" href="#nav-nom" role="tab"
+                                                       aria-controls="nav-nom" aria-selected="true">Nom et Prénom</a>
+                                                    <a class="nav-item nav-link" id="nav-secu-tab" data-toggle="tab"
+                                                       href="#nav-secu" role="tab" aria-controls="nav-secu"
+                                                       aria-selected="false">N° de Sécurité Sociale</a>
+                                                </div>
+                                            </nav>
+                                            <!--Tab panes
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane fade show active" id="nav-nom"
+                                                     aria-labelledby="nav-nom-tab">
+
+                                                    <form name="search"  action="{$view.urlbaseaddr}index.php/recherche/recherche" method="post">
+                                                        <div class="form-group">
+                                                            <label for="nom">Nom:</label>
+                                                            <input type="text" required="required" class="form-control"
+                                                                   id="nom" name="username">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="prenom">Prénom:</label>
+                                                            <input type="text" class="form-control" id="prenom" name="prenom">
+                                                        </div>
+                                                        <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">
+                                                            Fermer
+                                                        </button>
+                                                        <button name="submit" type="submit" value="10" class="btn btn-primary">Rechercher
+                                                        </button>
+                                                        <br>
+                                                    </form>
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane fade" id="nav-secu"
+                                                     aria-labelledby="nav-secu-tab">
+                                                    <form name="searchNumSecu" action="{$view.urlbaseaddr}index.php/recherche/recherche" method="post">
+                                                        <div class="form-group">
+                                                            <label for="NumeroCarteVitale">Numéro de Sécurité
+                                                                Sociale:</label>
+                                                            <input type="number" class="form-control"
+                                                                   id="NumeroCarteVitale" name="numerocartevitale">
+                                                        </div>
+                                                        <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">
+                                                            Fermer
+                                                        </button>
+                                                        <button name="submit" type="submit" value="11" class="btn btn-primary">Rechercher
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
                         <br /><br />
                         <table>
                             <tr>
@@ -150,7 +332,7 @@
                             {foreach from=$view.resultsCR item=compterendu}
                                 <tr>
                                     <td>{$compterendu.datecompterendu}</td>
-                                    <td>{$compterendu.patient}</td>
+                                    <td>{$compterendu.patient} &nbsp; &nbsp; &nbsp;</td>
                                     <td>{$compterendu.description}</td>
                                 </tr>
                             {/foreach}

@@ -90,30 +90,13 @@ class IndexController extends Controller
     }
 
 
-    public function signedAction()
-    {
-        if (isset($_SESSION['REMOTE_USER']))
-        {
-            $this->view['username'] = $_SESSION['REMOTE_USER'];
-
-            $this->viewObject->assign('view', $this->view);
-
-            $this->viewObject->display('index_index.tpl');
-
-        }
-        else
-        {
-            $this->viewObject->assign('view', $this->view);
-
-            $this->viewObject->display('index_signed.tpl');
-        }
-    }
-
     public function connexionProAction()
     {
         if (isset($_SESSION['REMOTE_USER']))
         {
             $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
 
             $this->viewObject->assign('view', $this->view);
 
@@ -134,6 +117,8 @@ class IndexController extends Controller
         {
             $this->view['username'] = $_SESSION['REMOTE_USER'];
 
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
+
             $this->viewObject->assign('view', $this->view);
 
             $this->viewObject->display('index_warning.tpl');
@@ -153,6 +138,8 @@ class IndexController extends Controller
         {
             $this->view['username'] = $_SESSION['REMOTE_USER'];
 
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
+
             $this->viewObject->assign('view', $this->view);
 
             $this->viewObject->display('index_warning.tpl');
@@ -171,6 +158,8 @@ class IndexController extends Controller
         if (isset($_SESSION['REMOTE_USER']))
         {
             $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->view['typeuser'] = $_SESSION['TYPE_USER'];
 
             $this->viewObject->assign('view', $this->view);
 

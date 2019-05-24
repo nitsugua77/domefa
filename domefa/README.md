@@ -5,7 +5,7 @@ A basic MVC application for educational purposes.
 
 * Add a virtual host definition in the Apache configuration file.
 * Add your database configuration to config/config.local.php,
-* Load the included test database data/db_schema.sql and data/db_data.sql,
+* Load the included test database data/domefa.sql,
 * Run the 'php composer.phar install' command,
 * Load the application in your favorite browser.
 

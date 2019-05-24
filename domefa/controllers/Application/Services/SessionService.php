@@ -39,7 +39,7 @@ class SessionService
             $this->postLoginForm = TRUE;
 
             // Initialize application business and frontend messages.
-            $GLOBALS['errormessage'] = 0;
+            //$GLOBALS['errormessage'] = 0;
 
             $this->redirectCounter = 0;
 
@@ -228,7 +228,7 @@ class SessionService
                         $this->postLoginForm = TRUE;
 
                     }
-                    header("Location: http://127.0.0.2/index.php/index/signed");
+                    header("Location: http://127.0.0.2/index.php/index/connexionPatient");
 
                 }
                 else {
@@ -295,6 +295,7 @@ class SessionService
                             setcookie('loggedin', TRUE, time()+ 4200, '/');
                             $_SESSION['LOGGEDIN'] = TRUE;
                             $_SESSION['REMOTE_USER'] = $username;
+                            $_SESSION['TYPE_USER'] = 0;
                             $this->postLoginForm = FALSE;
                         }
                         header("Location: http://127.0.0.2/index.php/recherche/account_patient");
@@ -316,6 +317,7 @@ class SessionService
 
                 }
 
+                echo $GLOBALS['errormessage'];
                 // Username-password login check done.
                 $this->loginCheck = TRUE;
 

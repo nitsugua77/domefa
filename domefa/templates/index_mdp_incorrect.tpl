@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Erreur de parcours</title>
-    <link rel="Stylesheet" href="{$view.urlbaseaddr}css/erreur.css">
+    <title>Erreur de connexion</title>
+    <link rel="Stylesheet" href="{$view.urlbaseaddr}css/mdp.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
@@ -32,15 +32,18 @@
 <div class="container text-center">
     <br>
     <br>
-
-
-    <h1 class="mt-5 text-white font-weight-light" style="font-size: 80px"> Vous ne pouvez pas être ici sans être connecté ! </h1>
-    <img src="{$view.links.Image}/erreur504.png" style="width: 200px">
     <br>
     <br>
-    <button class="btn btn-primary btn-lg" style="width:170px" > <a href="{$view.urlbaseaddr}index.php/index/connexionPro" style="text-decoration: none; color: white; font-size: 16px;"> Connexion Pro </a></button>
-    <button class="btn btn-primary btn-lg" style="width:170px"> <a href="{$view.urlbaseaddr}index.php/index/connexionPatient" style="text-decoration: none; color: white; font-size: 16px;"> Connexion Patient </a></button>
-    <button class="btn btn-primary btn-lg" style="width:170px"> <a href="{$view.links.Home}" style="text-decoration: none; color: white; font-size: 16px;"> Accueil </a></button>
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <h1 class="mt-5 text-white font-weight-light" style="font-size: 70px"><a href="{$view.links.Home}" style="text-decoration: none; color: white;" >  <img src="{$view.links.Image}/login_fail.png">  Mot de Passe Incorrect  <img src="{$view.links.Image}/login_fail.png"></a></h1>
+
+    <br>
+    <br>
+    <button class="btn btn-primary btn-lg" style="width:220px"> <a href="{$view.links.Home}" style="text-decoration: none; color: white; font-size: 25px;" > Accueil  </a></button>
 
 
 

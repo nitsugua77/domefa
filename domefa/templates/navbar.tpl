@@ -16,8 +16,17 @@
     <div class="container">
         <a class="item" href="{$view.links.HomePatient}"><img src="{$view.links.Image}/DMF.png" alt="Dossier Médical Facilité"
                                                              style="width:70px"></a>
-        <a class="navbar-brand" href="{$view.links.HomePatient}" style="font-size: 25px"> &nbsp; Le Dossier Médical
-            Facilité &nbsp; &nbsp; </a>
+        {if isset($view.typeuser)}
+            {if $view.typeuser == 0}
+                <a class="navbar-brand" href="{$view.links.HomePatient}" style="font-size: 25px"> &nbsp; Le Dossier Médical
+                    Facilité &nbsp; &nbsp; </a>
+            {else}
+                {if $view.typeuser == 1}
+                    <a class="navbar-brand" href="{$view.links.HomePro}" style="font-size: 25px"> &nbsp; Le Dossier Médical
+                        Facilité &nbsp; &nbsp; </a>
+                {/if}
+            {/if}
+        {/if}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,11 +56,23 @@
                 <li class="nav-item dropdown">
                     <button type="button" class="btn btn-default btn-sm"
                             style=" background: rgba(255,255,255,0);  border: none;">
-                        <a href="{$view.links.HomePatient}" id="navbarDropdown5" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false" class="water">
-                            Mon compte
-                        </a>
+                        {if isset($view.typeuser)}
+                            {if $view.typeuser == 0}
+                                <a href="{$view.links.HomePatient}" id="navbarDropdown5" role="button"
+                                   aria-haspopup="true"
+                                   aria-expanded="false" class="water">
+                                    Mon compte
+                                </a>
+                            {else}
+                                {if $view.typeuser == 1}
+                                    <a href="{$view.links.HomePro}" id="navbarDropdown5" role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false" class="water">
+                                        Mon compte
+                                    </a>
+                                {/if}
+                            {/if}
+                        {/if}
                     </button>
                 </li>
 

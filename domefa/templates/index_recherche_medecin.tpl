@@ -28,7 +28,95 @@
 
 </head>
 
-{include file='navbar.tpl'}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="item" href="{$view.links.HomePatient}"><img src="{$view.links.Image}/DMF.png" alt="Dossier Médical Facilité"
+                                                              style="width:70px"></a>
+        {if isset($view.typeuser)}
+            {if $view.typeuser == 0}
+                <a class="navbar-brand" href="{$view.links.HomePatient}" style="font-size: 25px"> &nbsp; Le Dossier Médical
+                    Facilité &nbsp; &nbsp; </a>
+            {else}
+                {if $view.typeuser == 1}
+                <a class="navbar-brand" href="{$view.links.HomePro}" style="font-size: 25px"> &nbsp; Le Dossier Médical
+                    Facilité &nbsp; &nbsp; </a>
+                {/if}
+            {/if}
+        {/if}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <button type="button" class="btn btn-default btn-sm"
+                            style=" background: rgba(255,255,255,0); border: none;">
+                        <a href="{$view.urlbaseaddr}index.php/recherche/indexMedecin" id="navbarDropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false" class="water">
+                            Rechercher un médecin &nbsp;
+                        </a>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-default btn-sm"
+                            style=" background: rgba(255,255,255,0);  border: none;">
+                        <a href="{$view.urlbaseaddr}index.php/recherche/imc" id="navbarDropdown2" aria-haspopup="true" aria-expanded="false"
+                           class="water">
+                            Calculer son IMC &nbsp;
+                        </a>
+                    </button>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <button type="button" class="btn btn-default btn-sm"
+                            style=" background: rgba(255,255,255,0);  border: none;">
+                        {if isset($view.typeuser)}
+                            {if $view.typeuser == 0}
+                                <a href="{$view.links.HomePatient}" id="navbarDropdown5" role="button"
+                                   aria-haspopup="true"
+                                   aria-expanded="false" class="water">
+                                    Mon compte
+                                </a>
+                            {else}
+                                {if $view.typeuser == 1}
+                                    <a href="{$view.links.HomePro}" id="navbarDropdown5" role="button"
+                                       aria-haspopup="true"
+                                       aria-expanded="false" class="water">
+                                        Mon compte
+                                    </a>
+                                {/if}
+                            {/if}
+                        {/if}
+
+                    </button>
+                </li>
+
+                <li>
+
+
+                    <button type="button" class="btn btn-default btn-sm water"
+                            style=" background: rgba(255,255,255,0); border: none;"><a
+                                tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="bottom"
+                                title="Modifier"
+                                data-content="Veuillez envoyer un mail à dmf@gmail.com pour toute modification."
+                                aria-haspopup="true" aria-expanded="false"
+                                class="water">Modifier</a></button>
+                </li>
+                <li>
+                    <!--<button type="button" ><a
+                                href="log_out.html" id="navbarDropdown4" aria-haspopup="true" aria-expanded="false"
+                                class="water"> Déconnexion</a></button>-->
+                    <form action="{$view.urlbaseaddr}index.php/session/index" method="post">
+                        <button class="btn btn-default " style=" background: rgba(255,255,255,0); border: none; font-size: 18px;" name="logout" type="submit" value="2">Déconnexion</button>
+                    </form>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <div class="container text-center">
     <div class="container">
@@ -55,7 +143,7 @@
                         </form>
 
 
-                        <form class="form-signin" action="{$view.urlbaseaddr}index.php/recherche/recherche" method="post">
+                        <!--<form class="form-signin" action="{$view.urlbaseaddr}index.php/recherche/recherche" method="post">
 
                             <div class="form-label-group">
                                 <label>Code Postal</label>
@@ -68,7 +156,7 @@
                             <button class="btn btn-lg btn-primary btn-block text-uppercase" name="submit" type="submit" value="3"> Rechercher </button>
                             <hr class="my-4">
 
-                        </form>
+                        </form>-->
 
                     </div>
                 </div>
