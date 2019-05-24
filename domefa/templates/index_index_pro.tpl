@@ -1,229 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DMF</title>
+    <meta name="author" content="Les Pingouins du Désert">
+    <meta name="description" content="Dossier Médical Facilité">
+    <meta name="keywords" content="Dosssier Médical Facile Santé ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+    <link rel="stylesheet" type="text/css" href="{$view.urlbaseaddr}css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{$view.urlbaseaddr}css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{$view.urlbaseaddr}css/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=votre_cle_api"
+            type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=votre_cle_api"
+            type="text/javascript"></script>
 
-{include file='head.tpl'}
- <body>
-  <div>
-      <div class="container1">
-          <a class="item" href="{$view.links.Home}"><img src="{$view.links.Image}/logo2.png" alt="Dossier Médicale Facilité"></a>
+    <link rel="Stylesheet" href="{$view.urlbaseaddr}css/header.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-          <a href="{$view.links.Home}"> <button class="button_espace_particulier">Vers Espace Particulier</button></a>
-          <h1 class="title">Le Dossier Médicale Facilité</h1>
-          <div>
-              <ul class="grouped">
-
-                  <li>
-                      <button class="button_header" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><span> Se connecter </span></button>
-                      <div id="id01" class="modal">
-
-                          <form class="modal-content animate" action="{$view.urlbaseaddr}index.php/session/index" method="post">
-                              <div class="imgcontainer">
-                                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                                  <img id="img_doctor" src="{$view.links.Image}/doctor1.png" alt="Avatar" class="avatar">
-                              </div>
-
-                              <div class="container">
-                                  <label for="RPPS"><b>RPPS</b></label>
-                                  <input type="text" placeholder="RPPS" name="RPPS"
-                                         required>
-
-                                  <label for="psw"><b>Mot de passe</b></label>
-                                  <input type="password" placeholder="Mot de passe" name="password" required>
-
-                                  <button class="btn btn-info btn-lg" name="submit" type="submit" value="12">Se connecter
-                                  </button>
-                              </div>
-
-                              <div class="container" style="background-color:#f1f1f1">
-                                  <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                                          class="cancelbtn">Cancel
-                                  </button>
-
-                              </div>
-                          </form>
-                      </div>
-                  </li>
-                  <li>
-                      <button class="button_header" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><span> S'inscrire </span></button>
-                      <div id="id02" class="modal">
-
-                          <form class="modal-content animate" action="{$view.urlbaseaddr}index.php/sessionPro/index" enctype="multipart/form-data"
-                                method="post">
-                              <div class="imgcontainer">
-                                  <h1 id="titre_modal_ins">Inscription pro</h1>
-                              </div>
-
-                              <div class="container">
-                                  <form>
-                                      <form action="{$view.urlbaseaddr}index.php/sessionPro/index" >
-                                          <div class="form-group">
-                                              <label for="ln">Nom : </label>
-                                              <input type="text" class="form-control" id="ln" placeholder="Nom de famille"
-                                                     name="username" pattern="^[a-zA-Z]+$" maxlength="40"
-                                                     data-error="Invalid character" required>
-
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="fn"> Prénoms : </label>
-                                              <input type="text" class="form-control" id="fn" placeholder="Prénoms"
-                                                     name="prenom" pattern="^[a-zA-Z]+$" maxlength="40"
-                                                     data-error="Invalid character" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="email">Email:</label><br>
-                                              <input type="email" class="form-control" id="email"
-                                                     placeholder="Enter email"
-                                                     name="email" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="pwd">Mot de Passe:</label>
-                                              <input type="password" class="form-control" id="pwd"
-                                                     placeholder="Mot de passe"
-                                                     name="password" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="pwd">Mot de Passe:</label>
-                                              <input type="password" class="form-control" id="cpwd"
-                                                     placeholder="Mot de passe"
-                                                     name="confirmPassword" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="mb">Téléphone : </label>
-                                              <input type="text" class="form-control" id="mb"
-                                                     placeholder="Numéro de téléphone"
-                                                     name="telephone" pattern="^[0-9]+$" maxlength="10" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="RPPS">RPPS</label>
-                                              <input type="text" placeholder="RPPS"
-                                                     name="RPPS" pattern="^[0-9]+$" maxlength="15" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="speci"> Spécialisation </label>
-                                              <input type="text" class="form-control" id="fn" placeholder="Spécialisation"
-                                                     name="specialisation" pattern="^[a-zA-Z]+$" maxlength="40"
-                                                     data-error="Invalid character" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="rue"> Rue </label>
-                                              <input type="text" class="form-control" id="fn" placeholder="Rue"
-                                                     name="rue" pattern="^[a-zA-Z]+$" maxlength="100"
-                                                     data-error="Invalid character" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="Numéro de résidence"> Numéro de résidence </label>
-                                              <input type="text" class="form-control" id="fn" placeholder="Numéro de Résidence"
-                                                     name="numerores" pattern="^[0-9]+$" maxlength="15"
-                                                     data-error="Invalid character" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="numeroappart"> Numéro d'appartement (non obligatoire) </label>
-                                              <input type="text" class="form-control" id="fn" placeholder="Numéro d'appartement"
-                                                     name="numeroappart" pattern="^[0-9]+$" maxlength="15"
-                                                     data-error="Invalid character">
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="ville"> Ville </label>
-                                              <input type="text" class="form-control" id="fn" placeholder="Ville"
-                                                     name="nomville" pattern="^[a-zA-Z]+$" maxlength="100"
-                                                     data-error="Invalid character" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="codepostal"> Code postal </label>
-                                              <input type="text" class="form-control" id="fn" placeholder="Code postal"
-                                                     name="codepostal" pattern="^[0-9]+$" maxlength="5"
-                                                     data-error="Invalid character" required>
-                                          </div>
-
-                                          <div class="form-group">
-                                              <label for="spe">Signature</label>
-                                              <input type="file" id="signature" name="signature"
-                                                     accept="image/png, image/jpeg" multiple required>
-                                          </div>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+{include file='navbar_disconnected_pro.tpl'}
 
 
+<section id="banner" class="banner">
+    <div class="bg-color">
+        <div class="container">
+            <div class="row">
+                <div class="banner-info">
+                    <div class="banner-logo text-center">
+                        <img src="{$view.links.Image}/DMFssbord.png" width="200px" class="img-responsive">
+                    </div>
+                    <div class="banner-text text-center">
+                        <h1 class="white">Le DMF, c'est avant tout la facilité</h1>
+                        <p>Le Dossier Médical Facilité vous permet en tant que professionnel de santé, d’accéder aux
+                            informations de vos patients en toute facilité et de manière sécurisée. Vous pouvez
+                            également
+                            retrouver les comptes rendus de vos confrères concernant vos patients pour un meilleur
+                            suivi. </p>
+                        <a href="#service" class="btn btn-appoint">En savoir plus</a>
+                    </div>
 
-                                          <!-- Trigger the modal with the submit button -->
-                                          <!--<button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Register</button>-->
-                                          <button class="btn btn-default login-form-btn center-block" name="submit"
-                                                  type="submit" value="5">Sign up
-                                          </button>
-                                      </form>
-                                      <div class="container" style="background-color:#f1f1f1">
-                                          <button type="button"
-                                                  onclick="document.getElementById('id02').style.display='none'"
-                                                  class="cancelbtn">Cancel
-                                          </button>
-                                      </div>
-                                  </form>
-                              </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="service" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <h2 class="head-title lg-line">Facile, en quelques clics!</h2>
+                <hr class="botm-line">
+                <p>Première utilisation? Ne vous inquiétez pas, nous vous expliquons tout.</p>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="service-info">
+                    <div class="icon">
+                        <i class="fa fa-usd"></i>
+                    </div>
+                    <div class="icon-info">
+                        <h4>Gratuit</h4>
+                        <p>Le DMF est un service entièrement gratuit. Vous simplifier la vie est notre priorité, il est
+                            donc accessible à tous et n’importe où. </p>
+                    </div>
+                </div>
 
-                  </li>
+                <div class="service-info">
+                    <div class="icon">
+                        <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="icon-info">
+                        <h4>Sécurisé</h4>
+                        <p>Nous vous garantissons la traçabilité et la sécurité des informations personnelles et
+                            médicales de vos patients.
+                            Vous êtes seul à pouvoir accéder à votre compte qui est protégé par des identifiants et un
+                            mot de passe. </p>
+                    </div>
+                </div>
 
-
-
-          </div>
-
-                  </li>
-              </ul>
-          </div>
-
-      </div>
-
-      <div class="container2">
-          <img src="{$view.links.Image}/2.jpg" alt="Dossier Médicale Facilité">
-          <div class="overlay"> DMF, votre Dossier Médicale Facilité !</div>
-      </div>
-
-      <div class="container3">
-          <h2> Qu'est ce que le DMF ?</h2>
-          <p> Le DMF est un carnet de santé accessible en ligne, permettant de regrouper toutes vos informations, facilitant leur visibilité par vos différents médecins. </p>
-          <img src="{$view.links.Image}/container3.png">
-
-          <br>
-
-          <button class="button_container3"><span> EN SAVOIR PLUS </span></button>
-          <br>
-      </div>
-
-      <div class="container4">
-          <h2> Pourquoi utiliser le DMF ?</h2>
-          <p>Avec une version numérique, personne ne pourrait oublier son carnet de santé.<br>\n' +
-              '            Il serait accessible n’importe quand et même en cas d’urgence ! </p>
-      </div>
-
-
-
-
-  </div>
-  <script>
-      // Get the modal
-      var modal = document.getElementById('id01');
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
-  </script>
+            </div>
+            <div class="col-md-4 col-sm-4">
 
 
+                <div class="service-info">
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="icon-info">
+                        <h4>Personnalisé</h4>
+                        <p>Votre compte DMF est totalement personnalisé. Retrouvez en quelques clics les informations
+                            médicales de votre patient. </p>
+                    </div>
+                </div>
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
 
-  </body>
+                <div class="service-info">
+                    <div class="icon">
+                        <i class="fa fa-shield-alt"></i>
+                    </div>
+                    <div class="icon-info">
+                        <h4>Confidentiel</h4>
+                        <p>Les informations médicales archivées sur les DMF sont soumis à la règlementation RGPD
+                            (règlement général sur la protection des données) en vigueur dans l’union européenne.
+                            Seul vous, et vos confrères, auront accès aux informations de vos patients. </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="cta-2" class="section-padding">
+    <div class="container">
+        <div class=" row">
+            <div class="col-md-2"></div>
+            <div class="text-right-md col-md-4 col-sm-4">
+                <h2 class="section-title white lg-line">« Objectif<br> Zéro Papier! »</h2>
+            </div>
+            <div class="col-md-4 col-sm-5">
+                DMF s’engage pour le développement durable. En vous créant un compte DMF, vous luttez contre la
+                surconsommation de papier. Fini les carnets de santé, les ordonnances, seulement vous et votre
+                smartphone !
+                <p class="text-right text-primary"><i>— L'équipe DMF</i></p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="section-title">
+                    <h2 class="head-title lg-line">Un carnet de santé numérique...<br>Mais pas que!</h2>
+                    <hr class="botm-line">
+                    <p class="sec-para">Le DMF n’est pas une simple interface médicale, c’est également un suivi
+                        bien-être.</p>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-8 col-xs-12">
+                <div style="visibility: visible;" class="col-sm-9 more-features-box">
+                    <div class="more-features-box-text">
+                        <div class="more-features-box-text-icon"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </div>
+                        <div class="more-features-box-text-description">
+                            <h3>Rechercher des patients</h3>
+                            <p>Vous pouvez rechercher vos patients facilement.</p>
+                        </div>
+                    </div>
+                    <div class="more-features-box-text">
+                        <div class="more-features-box-text-icon"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </div>
+                        <div class="more-features-box-text-description">
+                            <h3>Consulter le DMF de vos patients</h3>
+                            <p>Le DMF vous permet de trier efficacement les informations médicales de vos patients et
+                                les sécurise.
+                                Fini les couts d’ordonnance, d’impression. Nous nous occupons également de l’archivage
+                                de vos dossiers patients. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer id="footer">
+    <div class="top-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 marb20">
+                    <div class="ftr-tle">
+                        <h4 class="white no-padding">A propos de nous...</h4>
+                    </div>
+                    <div class="info-sec">
+                        <p>L'équipe DMF s'engage à vous simplifier la vie au quotidien. La question de la santé est au
+                            coeur de nos préoccupations.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 marb20">
+                    <div class="ftr-tle">
+                        <h4 class="white no-padding">Numéros utiles</h4>
+                    </div>
+                    <div class="info-sec">
+                        <ul class="quick-info">
+                            <li>Samu: 15</li>
+                            <li>Police: 17</li>
+                            <li>Pompiers: 18</li>
+                            <li>Urgences: 112</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 marb20">
+                    <div class="ftr-tle">
+                        <h4 class="white no-padding">Suivez-nous!</h4>
+                    </div>
+                    <div class="info-sec">
+                        <ul class="social-icon">
+                            <li class="bglight-blue"><i class="fab fa-facebook-f"></i></li>
+                            <li class="bgred"><i class="fab fa-google-plus-g"></i></li>
+                            <li class="bglight-blue"><i class="fab fa-twitter"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-line">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    © Copyright - Les Pingouins du Désert
+                    <div class="credits">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--/ footer-->
+
+<script src="{$view.links.Js}jquery.min.js"></script>
+<script src="{$view.links.Js}jquery.easing.min.js"></script>
+<script src="{$view.links.Js}bootstrap.min.js"></script>
+<script src="{$view.links.Js}custom.js"></script>
+
+</body>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+<script type="text/javascript" src="google_api.js"></script>
+
 </html>

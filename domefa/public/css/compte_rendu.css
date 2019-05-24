@@ -1,0 +1,19 @@
+
+
+.liste_medecin
+{
+    margin-left: 4px;
+    list-style: none;
+    text-align: left;
+}
+
+.liste_patient
+{
+
+    margin-right: 4px;
+    list-style: none;
+    text-align: right;
+    justify-content: center;
+
+}
+

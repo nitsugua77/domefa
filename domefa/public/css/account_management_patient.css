@@ -139,3 +139,25 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     list-style: none;
     text-decoration: none;
 }
+.grouped {
+    list-style: none;
+    padding: 10px;
+    justify-content: flex-end;
+    display: flex;
+
+}
+
+.water
+{
+    text-decoration: none;
+    color: #666666;
+    font-size: 18px;
+}
+
+
+.water:hover
+{
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+}

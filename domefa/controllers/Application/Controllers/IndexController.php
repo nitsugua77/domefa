@@ -41,9 +41,9 @@ class IndexController extends Controller
             'links' =>
             [
                 'Home' => $baseConfig['URLBASEADDR'] . 'index.php/index',
-                'Voyages_Park_Omega' => $baseConfig['URLBASEADDR'] . 'index.php/index/voyages_park_omega',
                 'Index_pro' => $baseConfig['URLBASEADDR'] . 'index.php/index/index_pro',
                 'Image' => $baseConfig['URLBASEADDR'] . 'img',
+                'Js' => $baseConfig['URLBASEADDR'] . 'js',
                 'HomePatient' => $baseConfig['URLBASEADDR'] . 'index.php/recherche/account_patient',
                 'HomePro' => $baseConfig['URLBASEADDR'] . 'index.php/recherche/account_medecin',
             ],
@@ -60,11 +60,16 @@ class IndexController extends Controller
         if (isset($_SESSION['REMOTE_USER']))
         {
             $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_warning.tpl');
         }
+        else {
+            $this->viewObject->assign('view', $this->view);
 
-        $this->viewObject->assign('view', $this->view);
-
-        $this->viewObject->display('index_index.tpl');
+            $this->viewObject->display('index_index.tpl');
+        }
     }
 
     public function index_proAction()
@@ -72,11 +77,16 @@ class IndexController extends Controller
         if (isset($_SESSION['REMOTE_USER']))
         {
             $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_warning.tpl');
         }
+        else {
+            $this->viewObject->assign('view', $this->view);
 
-        $this->viewObject->assign('view', $this->view);
-
-        $this->viewObject->display('index_index_pro.tpl');
+            $this->viewObject->display('index_index_pro.tpl');
+        }
     }
 
 
@@ -99,7 +109,7 @@ class IndexController extends Controller
         }
     }
 
-    public function voyages_Park_OmegaAction()
+    public function connexionProAction()
     {
         if (isset($_SESSION['REMOTE_USER']))
         {
@@ -107,14 +117,71 @@ class IndexController extends Controller
 
             $this->viewObject->assign('view', $this->view);
 
-            $this->viewObject->display('index_voyages_park_omega.tpl');
+            $this->viewObject->display('index_warning.tpl');
 
         }
         else
         {
             $this->viewObject->assign('view', $this->view);
 
+            $this->viewObject->display('index_connexion_pro.tpl');
+        }
+    }
+
+    public function connexionPatientAction()
+    {
+        if (isset($_SESSION['REMOTE_USER']))
+        {
+            $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
             $this->viewObject->display('index_warning.tpl');
+
+        }
+        else
+        {
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_connexion_patient.tpl');
+        }
+    }
+
+    public function inscriptionPatientAction()
+    {
+        if (isset($_SESSION['REMOTE_USER']))
+        {
+            $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_warning.tpl');
+
+        }
+        else
+        {
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_inscription_patient.tpl');
+        }
+    }
+
+    public function inscriptionProAction()
+    {
+        if (isset($_SESSION['REMOTE_USER']))
+        {
+            $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_warning.tpl');
+
+        }
+        else
+        {
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_indiscription_pro.tpl');
         }
     }
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Gestion de compte</title>
     <link rel="Stylesheet" href="{$view.urlbaseaddr}css/account_management_medecin.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
@@ -28,37 +28,7 @@
 
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <img style="width: 70px" src="{$view.links.Image}/DMF.png" alt="logo"/>
-        <a class="navbar-brand" href="{$view.links.HomePro}?user={$smarty.get.user}"> &nbsp; Le Dossier Médical Facilité</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false" style="text-decoration: none; color: #666666;">
-                        Rechercher un médecin &nbsp;
-                    </a>
-
-                    <a href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false" style="text-decoration: none; color: #666666;">
-                        Modifier &nbsp;
-                    </a>
-
-                    <form action="{$view.urlbaseaddr}index.php/session/index" method="post">
-                        <button class="btn btn-lg btn-primary" name="logout" type="submit" value="2">Logout</button>
-                    </form>
-
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+{include file='navbar.tpl'}
 
 <div class="container text-center">
     <h1 class="mt-5 text-white font-weight-light">Bienvenue Dr {$view.results.prenom} {$view.results.nom} </h1>

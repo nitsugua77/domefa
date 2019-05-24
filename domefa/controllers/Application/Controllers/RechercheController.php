@@ -60,6 +60,43 @@ class RechercheController extends Controller
         }
     }
 
+    public function indexMedecinAction()
+    {
+        if (isset($_SESSION['REMOTE_USER']))
+        {
+
+            $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_recherche_medecin.tpl');
+        }
+        else
+        {
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_warning.tpl');
+        }
+    }
+
+    public function imcAction()
+    {
+        if (isset($_SESSION['REMOTE_USER']))
+        {
+            $this->view['username'] = $_SESSION['REMOTE_USER'];
+
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_imc.tpl');
+        }
+        else
+        {
+            $this->viewObject->assign('view', $this->view);
+
+            $this->viewObject->display('index_warning.tpl');
+        }
+    }
+
     public function ajout_compte_renduAction()
     {
         if (isset($_SESSION['REMOTE_USER']))
@@ -132,6 +169,29 @@ class RechercheController extends Controller
                 $results = $this->getUsers()->readCV($_POST['numerocartevitale']);
                 if (is_object($results)) {
                     $results = [$this->hydrateArray($results)];
+                }
+            }
+
+            if (!empty($_POST['nom']) && isset($_POST['submit'])
+                && $_POST['submit'] == 7){
+                $results = $this->getUsers()->findMedecinNom($_POST['nom']);
+                if (is_object($results)) {
+                    $results = [$this->hydrateArrayMedecin($results)];
+                } else if (!empty($results)) {
+                    for ($i = 0; $i < count($results); $i++) {
+                        $results[$i] = $this->hydrateArrayMedecin($results[$i]);
+                    }
+                }
+            }
+            else if (!empty($_POST['codepostal']) && isset($_POST['submit'])
+                && $_POST['submit'] == 3){
+                $results = $this->getUsers()->findMedecinCP($_POST['codepostal']);
+                if (is_object($results)) {
+                    $results = [$this->hydrateArrayMedecin($results)];
+                } else {
+                    for ($i = 0; $i < count($results); $i++) {
+                        $results[$i] = $this->hydrateArrayMedecin($results[$i]);
+                    }
                 }
             }
 
@@ -254,6 +314,7 @@ class RechercheController extends Controller
         $array['description'] = $object->getDescription();
         $array['medecin'] = $this->getUsers()->findNomPrenomMedecin($object->getIdmedecin());
         $array['patient'] = $this->getUsers()->findNomPrenomPatient($object->getIdpatient());
+        //$array['documentannexe'] = $object->getDocumentannexe();
         return $array;
     }
 

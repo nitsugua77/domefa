@@ -51,7 +51,7 @@ class SessionController extends Controller
 
             $this->viewObject->assign('view', $this->view);
 
-            $this->viewObject->display('index_index.tpl');
+            $this->viewObject->display('logout.tpl');
         }
     }
 

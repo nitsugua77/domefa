@@ -233,4 +233,29 @@ class RechercheService
         }
     }
 
+    public function findMedecinCP($codepostal)
+    {
+        try {
+            if (isset($codepostal)) {
+                $results = $this->em->getRepository('Application\Models\Entity\Medecins')->findBy(array('codepostal' => $codepostal, array('specialisation' => 'asc')));
+                return $results;
+            }
+            return false;
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+    public function findMedecinNom($nom)
+    {
+        try {
+            if (isset($nom)) {
+                $results = $this->em->getRepository('Application\Models\Entity\Medecins')->findBy(array('nom' => $nom));
+                return $results;
+            }
+            return false;
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
 }

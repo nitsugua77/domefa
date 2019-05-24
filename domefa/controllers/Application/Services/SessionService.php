@@ -297,6 +297,8 @@ class SessionService
                             $_SESSION['REMOTE_USER'] = $username;
                             $this->postLoginForm = FALSE;
                         }
+                        header("Location: http://127.0.0.2/index.php/recherche/account_patient");
+
 
                     } else {
 

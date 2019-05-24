@@ -40,7 +40,7 @@ class SessionProController extends Controller
 
             $this->viewObject->assign('view', $this->view);
 
-            $this->viewObject->display('index_logged.tpl');
+            $this->viewObject->display('index_account_management_medecin.tpl');
         }
         else
         {
@@ -51,7 +51,7 @@ class SessionProController extends Controller
 
             $this->viewObject->assign('view', $this->view);
 
-            $this->viewObject->display('index_index_pro.tpl');
+            $this->viewObject->display('logout.tpl');
         }
     }
 

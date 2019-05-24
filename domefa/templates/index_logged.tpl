@@ -18,7 +18,7 @@
         <h2>Welcome, {$view.username}!<br /><br /><br />You are logged in.</h2><br /><br />
 
         <a href="{$view.urlbaseaddr}index.php/recherche/index?user={$view.username}"><button class="btn btn-primary btn-lg btn-primary" name="index">RECHERCHE</button></a>
-        <a href="{$view.links.Home}?user={$view.username}"><button class="btn btn-primary btn-lg btn-primary" name="index">Home</button></a>
+        <a href="{$view.links.HomePatient}?user={$view.username}"><button class="btn btn-primary btn-lg btn-primary" name="index">Home</button></a>
         <a href="{$view.urlbaseaddr}index.php/recherche/account_patient?user={$view.username}"><button class="btn btn-primary btn-lg btn-primary">Gestion de compte</button></a>
         <a href="{$view.urlbaseaddr}index.php/recherche/account_medecin?user={$view.username}"><button class="btn btn-primary btn-lg btn-primary">Gestion de compte Pro</button></a>
 
