@@ -1,45 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0de9dde-ce1b-4d1f-bdce-d5e5592ac768" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Controllers/CommentController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Controllers/RechercheController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Controllers/RechercheController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Controllers/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Controllers/SessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Controllers/SessionProController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Controllers/SessionProController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Services/CommentsService.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Services/CommentsServiceTrait.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Services/SessionProService.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Services/SessionProService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Application/Services/SessionService.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Application/Services/SessionService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BDD.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db_data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Application/Models/Entity/Comments.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Application/Models/Repository/CommentsRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Application/Models/Repository/OrdonnanceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Application/Models/Repository/OrdonnanceRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/comment_add_form.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/comment_delete.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/comment_edit_form.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/comment_index.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/head.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_account_management.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_account_management.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_account_management_medecin.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_account_management_medecin.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_ajout_compte_rendu.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_ajout_compte_rendu.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_connexion_patient.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_connexion_patient.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_connexion_pro.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_connexion_pro.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_indiscription_pro.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_indiscription_pro.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_inscription_patient.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_inscription_patient.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_logged.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_recherche_medecin.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_recherche_medecin.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_resultats.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_resultats.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_signed.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_warning.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_warning.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login_index.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar_pro.tpl" beforeDir="false" />
-    </list>
+    <list default="true" id="d0de9dde-ce1b-4d1f-bdce-d5e5592ac768" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +151,7 @@
           <entry key="js" value="1" />
           <entry key="markdown" value="3" />
           <entry key="md" value="7" />
-          <entry key="php" value="322" />
+          <entry key="php" value="324" />
           <entry key="png" value="5" />
           <entry key="sql" value="4" />
           <entry key="tpl" value="190" />
@@ -204,7 +166,7 @@
           <entry key="Image" value="8" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="10" />
-          <entry key="PHP" value="322" />
+          <entry key="PHP" value="324" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="SQL" value="4" />
           <entry key="Smarty" value="188" />
@@ -240,17 +202,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/Application/Controllers/IndexController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="92" column="31" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -430,7 +382,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/common" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="width" value="978" />
     <option name="height" value="1039" />
@@ -449,24 +401,6 @@
             <path>
               <item name="domefa" type="b2602c69:ProjectViewProjectNode" />
               <item name="domefa" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="domefa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="domefa" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="domefa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="domefa" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="domefa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="domefa" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -570,16 +504,15 @@
       <workItem from="1558599147830" duration="51540000" />
       <workItem from="1558657751035" duration="626000" />
       <workItem from="1558685461297" duration="13274000" />
-      <workItem from="1558703730188" duration="1940000" />
+      <workItem from="1558703730188" duration="2924000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="430604000" />
+    <option name="totallyTimeSpent" value="431588000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21140939" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -635,20 +568,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/Application/Models/Entity/Ordonnance.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1091">
-          <caret line="173" column="34" lean-forward="true" selection-start-line="173" selection-start-column="34" selection-end-line="173" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Application/Models/Entity/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="40" column="63" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/c404_index.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
@@ -1001,6 +920,12 @@
           <caret line="92" column="31" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="31" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/include/andrew_mysql_example.inc.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/include/andrew_session_example.inc.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
