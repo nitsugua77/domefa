@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0de9dde-ce1b-4d1f-bdce-d5e5592ac768" name="Default Changelist" comment="" />
+    <list default="true" id="d0de9dde-ce1b-4d1f-bdce-d5e5592ac768" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BDD.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Base de données modèles.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Choses à faire.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Compte_rendu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Information_client_pharmacien.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Information_client_pharmacien.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_particulier.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_pro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compte_pro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../container3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../domefa.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../header_connected.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../header_connected.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../header_disconnected.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../header_disconnected.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logo3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../medecin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../patient.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recherche_patient.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resultats.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue.js" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +161,7 @@
     <session id="-985010319">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="5" />
           <entry key="project.open.time.19" value="9" />
@@ -382,7 +415,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/common" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="width" value="978" />
     <option name="height" value="1039" />
@@ -504,15 +537,15 @@
       <workItem from="1558599147830" duration="51540000" />
       <workItem from="1558657751035" duration="626000" />
       <workItem from="1558685461297" duration="13274000" />
-      <workItem from="1558703730188" duration="2924000" />
+      <workItem from="1558703730188" duration="3190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="431588000" />
+    <option name="totallyTimeSpent" value="431854000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21140939" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
