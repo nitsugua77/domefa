@@ -105,7 +105,7 @@ class RechercheController extends Controller
 
     public function ajout_compte_renduAction()
     {
-        if (isset($_SESSION['REMOTE_USER']))
+        if (isset($_SESSION['REMOTE_USER']) && $_SESSION['TYPE_USER'] === 1)
         {
             if (!empty($_POST['numerocartevitale']) && !empty($_POST['datecompterendu']) && !empty($_POST['description']) && isset($_POST['submit'])
                 && $_POST['submit'] == 4){
@@ -223,7 +223,7 @@ class RechercheController extends Controller
 
     public function account_patientAction()
     {
-        if (isset($_SESSION['REMOTE_USER']))
+        if (isset($_SESSION['REMOTE_USER']) && $_SESSION['TYPE_USER'] === 0)
         {
             $results = $this->getUsers()->readCV($_SESSION['REMOTE_USER']);
             if (is_object($results)) {
@@ -263,7 +263,7 @@ class RechercheController extends Controller
 
     public function account_medecinAction()
     {
-        if (isset($_SESSION['REMOTE_USER']))
+        if (isset($_SESSION['REMOTE_USER']) && $_SESSION['TYPE_USER'] === 1)
         {
             $results = $this->getUsers()->readMedecin($_SESSION['REMOTE_USER']);
             if (is_object($results)) {

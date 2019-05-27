@@ -22,9 +22,9 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
     <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
@@ -32,73 +32,7 @@
 
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="item" href="{$view.links.HomePro}"><img src="{$view.links.Image}/DMF.png" alt="Dossier Médical Facilité"
-                                                              style="width:70px"></a>
-        <a class="navbar-brand" href="{$view.links.HomePro}" style="font-size: 25px"> &nbsp; Le Dossier Médical
-            Facilité &nbsp; &nbsp; </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <button type="button" class="btn btn-default btn-sm"
-                            style=" background: rgba(255,255,255,0); border: none;">
-                        <a href="{$view.urlbaseaddr}index.php/recherche/indexMedecin" id="navbarDropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false" class="water">
-                            Rechercher un médecin &nbsp;
-                        </a>
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="btn btn-default btn-sm"
-                            style=" background: rgba(255,255,255,0);  border: none;">
-                        <a href="{$view.urlbaseaddr}index.php/recherche/imc" id="navbarDropdown2" aria-haspopup="true" aria-expanded="false"
-                           class="water">
-                            Calculer son IMC &nbsp;
-                        </a>
-                    </button>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <button type="button" class="btn btn-default btn-sm"
-                            style=" background: rgba(255,255,255,0);  border: none;">
-                        <a href="{$view.links.HomePro}" id="navbarDropdown5" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false" class="water">
-                            Mon compte
-                        </a>
-                    </button>
-                </li>
-
-                <li>
-
-
-                    <button type="button" class="btn btn-default btn-sm water"
-                            style=" background: rgba(255,255,255,0); border: none;"><a
-                                tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="bottom"
-                                title="Modifier"
-                                data-content="Veuillez envoyer un mail à dmf@gmail.com pour toute modification."
-                                aria-haspopup="true" aria-expanded="false"
-                                class="water">Modifier</a></button>
-                </li>
-                <li>
-                    <!--<button type="button" ><a
-                                href="log_out.html" id="navbarDropdown4" aria-haspopup="true" aria-expanded="false"
-                                class="water"> Déconnexion</a></button>-->
-                    <form action="{$view.urlbaseaddr}index.php/session/index" method="post">
-                        <button class="btn btn-default " style=" background: rgba(255,255,255,0); border: none; font-size: 18px;" name="logout" type="submit" value="2">Déconnexion</button>
-                    </form>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
+{include file='navbar.tpl'}
 
 <script>
     $(document).ready(function () {

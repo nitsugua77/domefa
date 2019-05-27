@@ -14,14 +14,17 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="item" href="{$view.links.HomePatient}"><img src="{$view.links.Image}/DMF.png" alt="Dossier Médical Facilité"
-                                                             style="width:70px"></a>
+
         {if isset($view.typeuser)}
             {if $view.typeuser == 0}
+                <a class="item" href="{$view.links.HomePatient}"><img src="{$view.links.Image}/DMF.png" alt="Dossier Médical Facilité"
+                                                                      style="width:70px"></a>
                 <a class="navbar-brand" href="{$view.links.HomePatient}" style="font-size: 25px"> &nbsp; Le Dossier Médical
                     Facilité &nbsp; &nbsp; </a>
             {else}
                 {if $view.typeuser == 1}
+                    <a class="item" href="{$view.links.HomePro}"><img src="{$view.links.Image}/DMF.png" alt="Dossier Médical Facilité"
+                                                                          style="width:70px"></a>
                     <a class="navbar-brand" href="{$view.links.HomePro}" style="font-size: 25px"> &nbsp; Le Dossier Médical
                         Facilité &nbsp; &nbsp; </a>
                 {/if}
